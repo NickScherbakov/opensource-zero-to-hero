@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open Source ROI Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #2d3748;
+            text-align: center;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        .calculate-btn {
+            background: #4299e1;
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+        }
+        .calculate-btn:hover {
+            background: #3182ce;
+        }
+        .results {
+            margin-top: 30px;
+            padding: 20px;
+            background: #e6fffa;
+            border-radius: 5px;
+            display: none;
+        }
+        .metric {
+            margin-bottom: 10px;
+            padding: 10px;
+            background: white;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🚀 Open Source ROI Calculator</h1>
+        <p>Calculate the potential return on investment from adopting an open source strategy.</p>
+        
+        <form id="roiForm">
+            <div class="form-group">
+                <label for="currentDevCost">Current Annual Development Cost ($)</label>
+                <input type="number" id="currentDevCost" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="currentCac">Current Customer Acquisition Cost ($)</label>
+                <input type="number" id="currentCac" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="timeToMarket">Current Time to Market (months)</label>
+                <input type="number" id="timeToMarket" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="teamSize">Current Development Team Size</label>
+                <input type="number" id="teamSize" required>
+            </div>
+            
+            <button type="submit" class="calculate-btn">Calculate ROI</button>
+        </form>
+        
+        <div id="results" class="results">
+            <h2>📊 Projected Open Source Benefits</h2>
+            <div id="devSavings" class="metric"></div>
+            <div id="cacReduction" class="metric"></div>
+            <div id="timeImprovement" class="metric"></div>
+            <div id="totalRoi" class="metric"></div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('roiForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const currentDevCost = parseFloat(document.getElementById('currentDevCost').value);
+            const currentCac = parseFloat(document.getElementById('currentCac').value);
+            const timeToMarket = parseFloat(document.getElementById('timeToMarket').value);
+            const teamSize = parseFloat(document.getElementById('teamSize').value);
+            
+            // Open source benefits (based on research)
+            const devCostReduction = 0.4; // 40% reduction
+            const cacReduction = 0.8; // 80% reduction
+            const timeImprovement = 0.5; // 50% faster
+            
+            const newDevCost = currentDevCost * (1 - devCostReduction);
+            const newCac = currentCac * (1 - cacReduction);
+            const newTimeToMarket = timeToMarket * (1 - timeImprovement);
+            
+            const annualDevSavings = currentDevCost - newDevCost;
+            const cacSavings = currentCac - newCac;
+            const totalAnnualSavings = annualDevSavings + (cacSavings * 12); // Assuming monthly CAC
+            
+            document.getElementById('devSavings').innerHTML = `
+                <strong>Development Cost Savings:</strong> $${annualDevSavings.toLocaleString()} annually
+                <br><small>From $${currentDevCost.toLocaleString()} to $${newDevCost.toLocaleString()}</small>
+            `;
+            
+            document.getElementById('cacReduction').innerHTML = `
+                <strong>Customer Acquisition Cost Reduction:</strong> $${cacSavings.toLocaleString()} per customer
+                <br><small>From $${currentCac.toLocaleString()} to $${newCac.toLocaleString()}</small>
+            `;
+            
+            document.getElementById('timeImprovement').innerHTML = `
+                <strong>Time to Market Improvement:</strong> ${(timeToMarket - newTimeToMarket).toFixed(1)} months faster
+                <br><small>From ${timeToMarket} to ${newTimeToMarket.toFixed(1)} months</small>
+            `;
+            
+            document.getElementById('totalRoi').innerHTML = `
+                <strong>Total Annual ROI:</strong> $${totalAnnualSavings.toLocaleString()}
+                <br><small>Based on industry benchmarks for open source adoption</small>
+            `;
+            
+            document.getElementById('results').style.display = 'block';
+        });
+    </script>
+</body>
+</html>

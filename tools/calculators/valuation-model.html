@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open Source Valuation Model</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #2d3748;
+            text-align: center;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        .calculate-btn {
+            background: #48bb78;
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+        }
+        .calculate-btn:hover {
+            background: #38a169;
+        }
+        .results {
+            margin-top: 30px;
+            padding: 20px;
+            background: #f0fff4;
+            border-radius: 5px;
+            display: none;
+        }
+        .metric {
+            margin-bottom: 15px;
+            padding: 15px;
+            background: white;
+            border-radius: 5px;
+            border-left: 4px solid #48bb78;
+        }
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        .warning {
+            background: #fff5f5;
+            border-left: 4px solid #f56565;
+            padding: 10px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>💰 Open Source Company Valuation Model</h1>
+        <p>Calculate company valuation using specialized metrics for open source businesses.</p>
+        
+        <form id="valuationForm">
+            <div class="two-column">
+                <div>
+                    <div class="form-group">
+                        <label for="arr">Annual Recurring Revenue ($)</label>
+                        <input type="number" id="arr" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="githubStars">GitHub Stars</label>
+                        <input type="number" id="githubStars">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="contributors">Active Contributors</label>
+                        <input type="number" id="contributors">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="forks">GitHub Forks</label>
+                        <input type="number" id="forks">
+                    </div>
+                </div>
+                
+                <div>
+                    <div class="form-group">
+                        <label for="monthlyUsers">Monthly Active Users</label>
+                        <input type="number" id="monthlyUsers">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="conversionRate">User to Customer Conversion Rate (%)</label>
+                        <input type="number" id="conversionRate" step="0.1">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="marketPosition">Market Position (1-5 scale)</label>
+                        <input type="number" id="marketPosition" min="1" max="5" step="0.1">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="growthRate">ARR Growth Rate (%)</label>
+                        <input type="number" id="growthRate" step="0.1">
+                    </div>
+                </div>
+            </div>
+            
+            <button type="submit" class="calculate-btn">Calculate Valuation</button>
+        </form>
+        
+        <div id="results" class="results">
+            <h2>📈 Valuation Analysis</h2>
+            <div id="baseValuation" class="metric"></div>
+            <div id="communityPremium" class="metric"></div>
+            <div id="adoptionPremium" class="metric"></div>
+            <div id="marketPremium" class="metric"></div>
+            <div id="totalValuation" class="metric"></div>
+            
+            <div class="warning">
+                <strong>Note:</strong> This is a simplified model for educational purposes. 
+                Actual valuations depend on many additional factors and should be evaluated by financial professionals.
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('valuationForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const arr = parseFloat(document.getElementById('arr').value) || 0;
+            const githubStars = parseFloat(document.getElementById('githubStars').value) || 0;
+            const contributors = parseFloat(document.getElementById('contributors').value) || 0;
+            const forks = parseFloat(document.getElementById('forks').value) || 0;
+            const monthlyUsers = parseFloat(document.getElementById('monthlyUsers').value) || 0;
+            const conversionRate = parseFloat(document.getElementById('conversionRate').value) || 0;
+            const marketPosition = parseFloat(document.getElementById('marketPosition').value) || 1;
+            const growthRate = parseFloat(document.getElementById('growthRate').value) || 0;
+            
+            // Base SaaS valuation (multiple based on growth rate)
+            let baseMultiple = 8; // Conservative base
+            if (growthRate > 100) baseMultiple = 20;
+            else if (growthRate > 50) baseMultiple = 15;
+            else if (growthRate > 30) baseMultiple = 12;
+            else if (growthRate > 20) baseMultiple = 10;
+            
+            const baseValuation = arr * baseMultiple;
+            
+            // Community premium calculations
+            const starValue = githubStars * 2500; // $2,500 per star
+            const contributorValue = contributors * 15000; // $15,000 per contributor
+            const forkValue = forks * 1200; // $1,200 per fork
+            const communityPremium = starValue + contributorValue + forkValue;
+            
+            // Adoption premium (based on user base and conversion)
+            const adoptionScore = (monthlyUsers / 1000) * (conversionRate / 100);
+            const adoptionPremium = baseValuation * Math.min(adoptionScore * 0.1, 0.5); // Max 50% premium
+            
+            // Market position premium
+            const marketPremium = baseValuation * ((marketPosition - 1) * 0.25); // Up to 100% for position 5
+            
+            const totalValuation = baseValuation + communityPremium + adoptionPremium + marketPremium;
+            
+            document.getElementById('baseValuation').innerHTML = `
+                <strong>Base SaaS Valuation:</strong> $${baseValuation.toLocaleString()}
+                <br><small>$${arr.toLocaleString()} ARR × ${baseMultiple}x multiple (based on ${growthRate}% growth)</small>
+            `;
+            
+            document.getElementById('communityPremium').innerHTML = `
+                <strong>Community Premium:</strong> $${communityPremium.toLocaleString()}
+                <br><small>Stars: $${starValue.toLocaleString()} + Contributors: $${contributorValue.toLocaleString()} + Forks: $${forkValue.toLocaleString()}</small>
+            `;
+            
+            document.getElementById('adoptionPremium').innerHTML = `
+                <strong>Adoption Premium:</strong> $${adoptionPremium.toLocaleString()}
+                <br><small>Based on ${monthlyUsers.toLocaleString()} users and ${conversionRate}% conversion rate</small>
+            `;
+            
+            document.getElementById('marketPremium').innerHTML = `
+                <strong>Market Position Premium:</strong> $${marketPremium.toLocaleString()}
+                <br><small>Market position score: ${marketPosition}/5</small>
+            `;
+            
+            document.getElementById('totalValuation').innerHTML = `
+                <strong>🎯 Total Estimated Valuation:</strong> $${totalValuation.toLocaleString()}
+                <br><small>Open source premium: ${((totalValuation - baseValuation) / baseValuation * 100).toFixed(1)}%</small>
+            `;
+            
+            document.getElementById('results').style.display = 'block';
+        });
+    </script>
+</body>
+</html>

@@ -221,13 +221,13 @@ Comprehensive framework for investors evaluating OS startups:
 ## 🎨 **Visual Resources**
 
 ### 📈 Key Statistics Infographic
-![Open Source Competitive Advantage Statistics](/visuals/infographics/os-advantage-stats.png)
+[Open Source Competitive Advantage Statistics](/visuals/infographics/os-advantage-stats.md)
 
 ### 📊 Interactive Market Dashboard
 [View Live Dashboard →](/visuals/charts/market-dashboard.html)
 
 ### 🎯 Investor Pitch Template  
-[Download Pitch Deck →](/visuals/presentations/os-investor-pitch-template.pptx)
+[View Pitch Template →](/visuals/presentations/os-investor-pitch-template.md)
 
 ## 📢 **Latest Updates**
 
@@ -252,10 +252,9 @@ Comprehensive framework for investors evaluating OS startups:
 ## 💬 **Community & Support**
 
 ### 💬 **Join the Discussion**
-- [GitHub Discussions](/../../discussions) - Ask questions, share insights
+- [GitHub Discussions](https://github.com/NickScherbakov/opensource-zero-to-hero/discussions) - Ask questions, share insights
 - [Discord Community](https://discord.gg/opensourceadvantage) - Real-time chat
 - [LinkedIn Group](https://linkedin.com/groups/opensourceadvantage) - Professional networking
-- [Twitter](https://twitter.com/osadvantage) - Latest updates and news
 
 ### 📧 **Contact**
 - **Research Team**: research@opensourceadvantage.org

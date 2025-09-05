@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open Source Market Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .dashboard {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        h1 {
+            text-align: center;
+            color: #2d3748;
+            margin-bottom: 30px;
+        }
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        .metric-card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        .metric-value {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #4299e1;
+            margin-bottom: 10px;
+        }
+        .metric-label {
+            color: #666;
+            font-size: 0.9em;
+        }
+        .chart-container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+        .placeholder-chart {
+            height: 300px;
+            background: linear-gradient(45deg, #e2e8f0, #cbd5e0);
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #666;
+            font-size: 1.2em;
+        }
+        .trend-indicator {
+            color: #48bb78;
+            font-weight: bold;
+        }
+        .trend-indicator.negative {
+            color: #f56565;
+        }
+    </style>
+</head>
+<body>
+    <div class="dashboard">
+        <h1>📊 Open Source Market Dashboard</h1>
+        
+        <div class="metrics-grid">
+            <div class="metric-card">
+                <div class="metric-value">$26.4B</div>
+                <div class="metric-label">Total COSS Funding 2025</div>
+            </div>
+            
+            <div class="metric-card">
+                <div class="metric-value">800+</div>
+                <div class="metric-label">Funded Companies</div>
+            </div>
+            
+            <div class="metric-card">
+                <div class="metric-value">7x</div>
+                <div class="metric-label">Higher IPO Valuations</div>
+            </div>
+            
+            <div class="metric-card">
+                <div class="metric-value">14x</div>
+                <div class="metric-label">Higher M&A Multiples</div>
+            </div>
+            
+            <div class="metric-card">
+                <div class="metric-value">2.3x</div>
+                <div class="metric-label">Higher Unicorn Rate</div>
+            </div>
+            
+            <div class="metric-card">
+                <div class="metric-value">50%</div>
+                <div class="metric-label">Faster Development</div>
+            </div>
+        </div>
+        
+        <div class="chart-container">
+            <h3>Funding by Sector</h3>
+            <div class="placeholder-chart">
+                📈 Interactive chart showing AI/ML (35%), Infrastructure (28%), Security (18%), Developer Tools (12%), Other (7%)
+            </div>
+        </div>
+        
+        <div class="chart-container">
+            <h3>Geographic Distribution</h3>
+            <div class="placeholder-chart">
+                🌍 Interactive map showing US (60%), Europe (25%), Asia (15%)
+            </div>
+        </div>
+        
+        <div class="chart-container">
+            <h3>Growth Trends</h3>
+            <div class="placeholder-chart">
+                📈 Time series chart showing funding growth over time with trend analysis
+            </div>
+        </div>
+        
+        <div style="text-align: center; margin-top: 30px; color: #666;">
+            <p><em>This is a demonstration dashboard. Interactive charts and real-time data will be added in future updates.</em></p>
+            <p>Data sources: Linux Foundation, GitHub, CNCF, Industry Reports</p>
+        </div>
+    </div>
+</body>
+</html>
