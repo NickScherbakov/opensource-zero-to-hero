@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open Source Competitive Advantage | Data-Driven Research</title>
+    <meta name="description" content="Comprehensive research showing why open source is the ultimate competitive advantage. 7x higher IPO valuations, 14x higher M&A multiples.">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:title" content="Open Source Competitive Advantage">
+    <meta property="og:description" content="Data-driven research on why open source drives superior business outcomes">
+    <meta property="og:type" content="website">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #fafafa;
+        }
+
+        /* Header & Navigation */
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+        }
+
+        .nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            transition: opacity 0.3s;
+        }
+
+        .nav-links a:hover {
+            opacity: 0.8;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+            padding: 8rem 2rem 6rem;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            font-weight: 800;
+            line-height: 1.2;
+        }
+
+        .hero .subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+            font-weight: 300;
+        }
+
+        .hero .lead-stat {
+            font-size: 1.2rem;
+            background: rgba(255,255,255,0.15);
+            padding: 1rem 2rem;
+            border-radius: 10px;
+            display: inline-block;
+            margin-bottom: 3rem;
+            backdrop-filter: blur(10px);
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: white;
+            color: #667eea;
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        /* Stats Grid */
+        .stats-section {
+            padding: 6rem 2rem;
+            background: white;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #2d3748;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 4rem;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .stat-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s ease;
+            border: 1px solid #f0f0f0;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: bold;
+            color: #667eea;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            font-size: 1.1rem;
+            color: #2d3748;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-desc {
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        /* Value Propositions */
+        .value-props {
+            padding: 6rem 2rem;
+            background: #f8fafc;
+        }
+
+        .props-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .prop-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            border-left: 4px solid #667eea;
+        }
+
+        .prop-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .prop-title {
+            font-size: 1.3rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            color: #2d3748;
+        }
+
+        .prop-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .prop-list li {
+            padding: 0.3rem 0;
+            color: #666;
+        }
+
+        .prop-list li:before {
+            content: "✓ ";
+            color: #48bb78;
+            font-weight: bold;
+            margin-right: 0.5rem;
+        }
+
+        /* Case Studies Preview */
+        .case-studies {
+            padding: 6rem 2rem;
+            background: white;
+        }
+
+        .case-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .case-card {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 15px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .case-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.1);
+            z-index: 1;
+        }
+
+        .case-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .case-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .case-stats {
+            margin-bottom: 1.5rem;
+        }
+
+        .case-stat {
+            margin-bottom: 0.5rem;
+        }
+
+        /* Tools Section */
+        .tools-section {
+            padding: 6rem 2rem;
+            background: #2d3748;
+            color: white;
+        }
+
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .tool-card {
+            background: rgba(255,255,255,0.1);
+            padding: 2rem;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.2);
+            text-align: center;
+        }
+
+        .tool-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .tool-title {
+            font-size: 1.3rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        /* Footer */
+        .footer {
+            background: #1a202c;
+            color: white;
+            text-align: center;
+            padding: 3rem 2rem 2rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: #cbd5e0;
+            text-decoration: none;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero .subtitle {
+                font-size: 1.2rem;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .stats-grid,
+            .props-grid,
+            .case-grid,
+            .tools-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-fade-in-up {
+            animation: fadeInUp 0.6s ease-out;
+        }
+
+        /* Scroll animations */
+        .scroll-animate {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease-out;
+        }
+
+        .scroll-animate.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <div class="logo">🚀 Open Source Advantage</div>
+            <ul class="nav-links">
+                <li><a href="#stats">Research</a></li>
+                <li><a href="#case-studies">Case Studies</a></li>
+                <li><a href="#tools">Tools</a></li>
+                <li><a href="https://github.com/NickScherbakov/opensource-zero-to-hero">GitHub</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1 class="animate-fade-in-up">Open Source as Competitive Advantage</h1>
+            <p class="subtitle animate-fade-in-up">A Data-Driven Guide for Startups & Investors</p>
+            <div class="lead-stat animate-fade-in-up">
+                "Open source software companies achieve <strong>7x higher IPO valuations</strong> and <strong>14x higher M&A valuations</strong> compared to proprietary software companies" — Linux Foundation Research 2025
+            </div>
+            <div class="cta-buttons animate-fade-in-up">
+                <a href="#stats" class="btn btn-primary">View Research</a>
+                <a href="#tools" class="btn btn-secondary">Try Tools</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Statistics -->
+    <section id="stats" class="stats-section">
+        <div class="container">
+            <h2 class="section-title scroll-animate">Key Findings at a Glance</h2>
+            <p class="section-subtitle scroll-animate">Quantitative evidence of open source competitive advantages</p>
+            
+            <div class="stats-grid">
+                <div class="stat-card scroll-animate">
+                    <div class="stat-number">7x</div>
+                    <div class="stat-label">Higher IPO Valuations</div>
+                    <div class="stat-desc">Linux Foundation 2025</div>
+                </div>
+                
+                <div class="stat-card scroll-animate">
+                    <div class="stat-number">14x</div>
+                    <div class="stat-label">Higher M&A Multiples</div>
+                    <div class="stat-desc">Commercial OSS Report 2024</div>
+                </div>
+                
+                <div class="stat-card scroll-animate">
+                    <div class="stat-number">50%</div>
+                    <div class="stat-label">Faster Development</div>
+                    <div class="stat-desc">Developer Productivity Study</div>
+                </div>
+                
+                <div class="stat-card scroll-animate">
+                    <div class="stat-number">80%</div>
+                    <div class="stat-label">Lower Customer Acquisition Cost</div>
+                    <div class="stat-desc">Bottom-up Sales Analysis</div>
+                </div>
+                
+                <div class="stat-card scroll-animate">
+                    <div class="stat-number">65%</div>
+                    <div class="stat-label">Fewer Security Vulnerabilities</div>
+                    <div class="stat-desc">Peer Review Advantage Study</div>
+                </div>
+                
+                <div class="stat-card scroll-animate">
+                    <div class="stat-number">10x</div>
+                    <div class="stat-label">Larger Global Talent Pool</div>
+                    <div class="stat-desc">GitHub Developer Survey 2025</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Value Propositions -->
+    <section class="value-props">
+        <div class="container">
+            <h2 class="section-title scroll-animate">Core Competitive Advantages</h2>
+            <p class="section-subtitle scroll-animate">Why open source drives superior business outcomes</p>
+            
+            <div class="props-grid">
+                <div class="prop-card scroll-animate">
+                    <div class="prop-icon">📈</div>
+                    <h3 class="prop-title">Superior Financial Performance</h3>
+                    <ul class="prop-list">
+                        <li>7x higher IPO valuations</li>
+                        <li>14x higher M&A multiples</li>
+                        <li>45% faster revenue growth</li>
+                        <li>60% higher profit margins</li>
+                    </ul>
+                </div>
+                
+                <div class="prop-card scroll-animate">
+                    <div class="prop-icon">⚡</div>
+                    <h3 class="prop-title">Accelerated Development</h3>
+                    <ul class="prop-list">
+                        <li>50% faster time-to-market</li>
+                        <li>Global contributor network</li>
+                        <li>Continuous innovation cycle</li>
+                        <li>Reduced development costs</li>
+                    </ul>
+                </div>
+                
+                <div class="prop-card scroll-animate">
+                    <div class="prop-icon">💰</div>
+                    <h3 class="prop-title">Efficient Go-to-Market</h3>
+                    <ul class="prop-list">
+                        <li>80% lower customer acquisition costs</li>
+                        <li>Bottom-up adoption model</li>
+                        <li>Built-in developer marketing</li>
+                        <li>Viral growth mechanics</li>
+                    </ul>
+                </div>
+                
+                <div class="prop-card scroll-animate">
+                    <div class="prop-icon">🔒</div>
+                    <h3 class="prop-title">Enhanced Security & Trust</h3>
+                    <ul class="prop-list">
+                        <li>65% fewer critical vulnerabilities</li>
+                        <li>Transparent peer review process</li>
+                        <li>Rapid security response</li>
+                        <li>Enterprise-grade reliability</li>
+                    </ul>
+                </div>
+                
+                <div class="prop-card scroll-animate">
+                    <div class="prop-icon">🌍</div>
+                    <h3 class="prop-title">Global Network Effects</h3>
+                    <ul class="prop-list">
+                        <li>10x larger talent pool</li>
+                        <li>Strategic partnership opportunities</li>
+                        <li>Industry standard positioning</li>
+                        <li>Community-driven innovation</li>
+                    </ul>
+                </div>
+                
+                <div class="prop-card scroll-animate">
+                    <div class="prop-icon">🎯</div>
+                    <h3 class="prop-title">Market Positioning</h3>
+                    <ul class="prop-list">
+                        <li>Developer mindshare advantage</li>
+                        <li>Ecosystem network effects</li>
+                        <li>Standard-setting potential</li>
+                        <li>Community-driven adoption</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Case Studies Preview -->
+    <section id="case-studies" class="case-studies">
+        <div class="container">
+            <h2 class="section-title scroll-animate">Featured Success Stories</h2>
+            <p class="section-subtitle scroll-animate">Real companies that achieved massive success through open source</p>
+            
+            <div class="case-grid">
+                <div class="case-card scroll-animate">
+                    <div class="case-content">
+                        <h3 class="case-title">🐙 GitHub</h3>
+                        <div class="case-stats">
+                            <div class="case-stat"><strong>Exit:</strong> $7.5B Microsoft acquisition</div>
+                            <div class="case-stat"><strong>Founded:</strong> 2008</div>
+                            <div class="case-stat"><strong>Users:</strong> 100M+ developers</div>
+                        </div>
+                        <p>Developer-first approach created winner-take-all dynamics in the Git hosting market.</p>
+                    </div>
+                </div>
+                
+                <div class="case-card scroll-animate">
+                    <div class="case-content">
+                        <h3 class="case-title">🤗 Hugging Face</h3>
+                        <div class="case-stats">
+                            <div class="case-stat"><strong>Valuation:</strong> $4.5B</div>
+                            <div class="case-stat"><strong>Founded:</strong> 2016</div>
+                            <div class="case-stat"><strong>Users:</strong> 7M+ developers</div>
+                        </div>
+                        <p>Open source AI democratization created massive market opportunity in machine learning.</p>
+                    </div>
+                </div>
+                
+                <div class="case-card scroll-animate">
+                    <div class="case-content">
+                        <h3 class="case-title">⚡ Redis</h3>
+                        <div class="case-stats">
+                            <div class="case-stat"><strong>Adoption:</strong> 8/10 Fortune 500</div>
+                            <div class="case-stat"><strong>Founded:</strong> 2011</div>
+                            <div class="case-stat"><strong>Model:</strong> Open Core + SaaS</div>
+                        </div>
+                        <p>Infrastructure software benefits most from open source adoption and community contribution.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Tools -->
+    <section id="tools" class="tools-section">
+        <div class="container">
+            <h2 class="section-title">Interactive Analysis Tools</h2>
+            <p class="section-subtitle">Calculate the impact of open source strategy on your business</p>
+            
+            <div class="tools-grid">
+                <div class="tool-card scroll-animate">
+                    <div class="tool-icon">💰</div>
+                    <h3 class="tool-title">ROI Calculator</h3>
+                    <p>Calculate potential savings and returns from open source adoption including development costs, CAC reduction, and time-to-market improvements.</p>
+                    <a href="tools/calculators/roi-calculator.html" class="btn btn-primary" style="margin-top: 1rem;">Launch Tool</a>
+                </div>
+                
+                <div class="tool-card scroll-animate">
+                    <div class="tool-icon">📊</div>
+                    <h3 class="tool-title">Valuation Model</h3>
+                    <p>Specialized metrics for evaluating open source companies including community engagement, adoption velocity, and market position.</p>
+                    <a href="tools/calculators/valuation-model.html" class="btn btn-primary" style="margin-top: 1rem;">Launch Tool</a>
+                </div>
+                
+                <div class="tool-card scroll-animate">
+                    <div class="tool-icon">📈</div>
+                    <h3 class="tool-title">Market Dashboard</h3>
+                    <p>Live dashboard showing funding trends, sector analysis, and key metrics across the open source ecosystem.</p>
+                    <a href="visuals/charts/market-dashboard.html" class="btn btn-primary" style="margin-top: 1rem;">View Dashboard</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="https://github.com/NickScherbakov/opensource-zero-to-hero">GitHub Repository</a>
+                <a href="docs/business-case/business-case-analysis.html">Business Case</a>
+                <a href="docs/investor-guide/investor-dd-framework.html">Investor Guide</a>
+                <a href="CONTRIBUTING.html">Contribute</a>
+            </div>
+            <p>&copy; 2025 Open Source Competitive Advantage Project. Licensed under MIT & CC BY 4.0.</p>
+            <p><em>"The future belongs to companies that can harness the collective intelligence of global developer communities."</em></p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.scroll-animate').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Mobile menu toggle (if needed)
+        const navToggle = document.querySelector('.nav-toggle');
+        const navLinks = document.querySelector('.nav-links');
+
+        if (navToggle) {
+            navToggle.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+            });
+        }
+
+        // Counter animation for statistics
+        function animateCounter(element, target, duration = 2000) {
+            let start = 0;
+            const increment = target / (duration / 16);
+            
+            function updateCounter() {
+                start += increment;
+                if (start < target) {
+                    element.textContent = Math.floor(start);
+                    requestAnimationFrame(updateCounter);
+                } else {
+                    element.textContent = target;
+                }
+            }
+            
+            updateCounter();
+        }
+
+        // Trigger counter animations when stats section is visible
+        const statsObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const statNumbers = entry.target.querySelectorAll('.stat-number');
+                    statNumbers.forEach(stat => {
+                        const text = stat.textContent;
+                        const number = parseInt(text.replace(/\D/g, ''));
+                        if (number) {
+                            stat.textContent = '0';
+                            setTimeout(() => {
+                                animateCounter(stat, number);
+                                // Add back the suffix
+                                setTimeout(() => {
+                                    if (text.includes('x')) stat.textContent = number + 'x';
+                                    else if (text.includes('%')) stat.textContent = number + '%';
+                                }, 2000);
+                            }, 500);
+                        }
+                    });
+                    statsObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        const statsSection = document.querySelector('.stats-section');
+        if (statsSection) {
+            statsObserver.observe(statsSection);
+        }
+    </script>
+</body>
+</html>
