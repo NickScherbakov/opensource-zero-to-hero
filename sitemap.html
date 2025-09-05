@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site Map | Open Source Competitive Advantage</title>
+    <meta name="description" content="Complete site map and navigation guide for the Open Source Competitive Advantage research project">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #fafafa;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+        }
+        
+        .nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+        
+        .logo {
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+        
+        .back-link {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        
+        .back-link:hover {
+            opacity: 0.8;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .content {
+            background: white;
+            padding: 3rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            color: #2d3748;
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 1rem;
+            text-align: center;
+        }
+        
+        h2 {
+            color: #4a5568;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 0.5rem;
+            margin: 2rem 0 1rem 0;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .sitemap-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .section-card {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+        }
+        
+        .section-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        
+        .section-title {
+            color: #667eea;
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .section-links {
+            list-style: none;
+        }
+        
+        .section-links li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .section-links a {
+            color: #4a5568;
+            text-decoration: none;
+            padding: 0.3rem 0;
+            display: block;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+        
+        .section-links a:hover {
+            color: #667eea;
+            background: #edf2f7;
+            padding-left: 0.5rem;
+        }
+        
+        .highlight-box {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+            text-align: center;
+            font-weight: bold;
+        }
+        
+        .chart-preview {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+        
+        .chart-item {
+            background: white;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 1rem;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        
+        .chart-item:hover {
+            transform: scale(1.02);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 3rem;
+            padding: 2rem;
+            background: #f8fafc;
+            border-radius: 10px;
+            color: #666;
+        }
+        
+        .footer a {
+            color: #667eea;
+            text-decoration: none;
+            margin: 0 1rem;
+        }
+        
+        .footer a:hover {
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+            
+            .content {
+                padding: 1.5rem;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .sitemap-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="logo">🗺️ Site Map</div>
+            <a href="/opensource-zero-to-hero/" class="back-link">← Back to Home</a>
+        </nav>
+    </header>
+    
+    <div class="container">
+        <div class="content">
+            <h1>🗺️ Site Map & Navigation Guide</h1>
+            
+            <div class="highlight-box">
+                Welcome to the complete guide to our Open Source Competitive Advantage research project!
+                <br>Navigate through all sections and discover valuable insights about open source business strategies.
+            </div>
+            
+            <div class="sitemap-grid">
+                <!-- Main Pages -->
+                <div class="section-card">
+                    <div class="section-title">🏠 Main Pages</div>
+                    <ul class="section-links">
+                        <li><a href="/opensource-zero-to-hero/">🚀 Home Page</a></li>
+                        <li><a href="/opensource-zero-to-hero/sitemap.xml">🔗 XML Sitemap</a></li>
+                        <li><a href="/opensource-zero-to-hero/contributing.html">🤝 Contributing Guide</a></li>
+                        <li><a href="/opensource-zero-to-hero/code-of-conduct.html">📋 Code of Conduct</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Research & Analysis -->
+                <div class="section-card">
+                    <div class="section-title">📊 Research & Analysis</div>
+                    <ul class="section-links">
+                        <li><a href="/opensource-zero-to-hero/docs/business-case.html">💼 Business Case Analysis</a></li>
+                        <li><a href="/opensource-zero-to-hero/docs/investor-guide.html">💰 Investor Due Diligence Guide</a></li>
+                        <li><a href="/opensource-zero-to-hero/docs/due-diligence.html">🔍 Due Diligence Checklist</a></li>
+                        <li><a href="/opensource-zero-to-hero/docs/valuation-models.html">📈 Valuation Models</a></li>
+                        <li><a href="/opensource-zero-to-hero/docs/funding-report.html">💸 2025 Funding Report</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Case Studies -->
+                <div class="section-card">
+                    <div class="section-title">🎯 Case Studies</div>
+                    <ul class="section-links">
+                        <li><a href="/opensource-zero-to-hero/docs/github-case-study.html">🐙 GitHub Success Story</a></li>
+                        <li><a href="/opensource-zero-to-hero/docs/huggingface-case-study.html">🤗 Hugging Face Journey</a></li>
+                        <li><a href="/opensource-zero-to-hero/docs/redis-case-study.html">🔴 Redis Monetization</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Interactive Tools -->
+                <div class="section-card">
+                    <div class="section-title">🛠️ Interactive Tools</div>
+                    <ul class="section-links">
+                        <li><a href="/opensource-zero-to-hero/tools/">🔧 Tools Directory</a></li>
+                        <li><a href="/opensource-zero-to-hero/tools/calculators/valuation-model.html">💰 Valuation Calculator</a></li>
+                        <li><a href="/opensource-zero-to-hero/tools/calculators/roi-calculator.html">📊 ROI Calculator</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Visual Resources -->
+                <div class="section-card">
+                    <div class="section-title">📈 Visual Resources</div>
+                    <ul class="section-links">
+                        <li><a href="/opensource-zero-to-hero/visuals/">🎨 Visuals Directory</a></li>
+                        <li><a href="/opensource-zero-to-hero/visuals/charts/market-dashboard.html">📊 Market Dashboard</a></li>
+                        <li><a href="/opensource-zero-to-hero/visuals/infographics/os-advantage-stats.html">📋 Advantage Stats</a></li>
+                        <li><a href="/opensource-zero-to-hero/visuals/presentations/os-investor-pitch-template.html">🎤 Pitch Template</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Data & Research -->
+                <div class="section-card">
+                    <div class="section-title">📚 Data & Research</div>
+                    <ul class="section-links">
+                        <li><a href="/opensource-zero-to-hero/data/">📁 Data Directory</a></li>
+                        <li><a href="/opensource-zero-to-hero/data/open_source_sector_analysis.csv">📊 Sector Analysis Data</a></li>
+                        <li><a href="/opensource-zero-to-hero/data/open_source_success_cases.csv">🏆 Success Cases Data</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <h2>📈 Available Charts & Graphics</h2>
+            <div class="chart-preview">
+                <div class="chart-item">
+                    <strong>📊 Funding by Sector</strong>
+                    <p><a href="/opensource-zero-to-hero/images/funding_by_sector.png">View Chart</a></p>
+                </div>
+                <div class="chart-item">
+                    <strong>⭐ GitHub Stars vs Valuation</strong>
+                    <p><a href="/opensource-zero-to-hero/images/github_stars_vs_exit_valuation.png">View Chart</a></p>
+                </div>
+                <div class="chart-item">
+                    <strong>🌍 Geographic Distribution</strong>
+                    <p><a href="/opensource-zero-to-hero/images/geographic_distribution.png">View Chart</a></p>
+                </div>
+                <div class="chart-item">
+                    <strong>📈 Growth Trends</strong>
+                    <p><a href="/opensource-zero-to-hero/images/growth_trends.png">View Chart</a></p>
+                </div>
+            </div>
+            
+            <div class="highlight-box">
+                <strong>🎯 Quick Navigation Tips:</strong><br>
+                • Start with the <a href="/opensource-zero-to-hero/" style="color: white; text-decoration: underline;">Home Page</a> for an overview<br>
+                • Check the <a href="/opensource-zero-to-hero/visuals/charts/market-dashboard.html" style="color: white; text-decoration: underline;">Market Dashboard</a> for interactive charts<br>
+                • Use the <a href="/opensource-zero-to-hero/tools/calculators/valuation-model.html" style="color: white; text-decoration: underline;">Valuation Calculator</a> for practical analysis<br>
+                • Read case studies to understand real-world applications
+            </div>
+            
+            <div class="footer">
+                <p>
+                    <a href="https://github.com/NickScherbakov/opensource-zero-to-hero">📚 GitHub Repository</a>
+                    <a href="/opensource-zero-to-hero/docs/business-case.html">💼 Business Case</a>
+                    <a href="/opensource-zero-to-hero/docs/investor-guide.html">💰 Investor Guide</a>
+                </p>
+                <p style="margin-top: 1rem; font-size: 0.9rem;">
+                    © 2025 Open Source Competitive Advantage Project | 
+                    Licensed under <a href="/opensource-zero-to-hero/LICENSE">MIT & CC BY 4.0</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
