@@ -1,0 +1,11 @@
+sector,total_funding_2025_b,num_funded_companies,avg_valuation_m,open_source_percentage,top_companies
+AI/ML Platforms,8.2,67,122,78,"Hugging Face, OpenAI, Databricks"
+Developer Tools,6.1,89,69,84,"GitHub, GitLab, JetBrains"
+Cloud Infrastructure,5.8,45,129,71,"HashiCorp, Docker, Kubernetes Inc"
+Data Management,4.3,32,134,69,"MongoDB, Elastic, InfluxData"
+Security,3.4,41,83,63,"Snyk, Aqua Security, Sysdig"
+DevOps/CI-CD,2.9,56,52,79,"GitLab, JFrog, CircleCI"
+Blockchain,2.1,23,91,95,"ConsenSys, Chainlink, Polygon"
+IoT/Edge,1.7,19,89,58,"EdgeX, KubeEdge, OpenYurt"
+Analytics,1.5,28,54,67,"Grafana, Looker, Tableau"
+Collaboration,1.2,15,80,45,"Slack, Discord, Notion"

@@ -1,0 +1,11 @@
+company_name,founded_year,exit_year,exit_type,exit_valuation_b,latest_valuation_b,github_stars_k,primary_oss_project,monetization_model,enterprise_value_prop
+GitHub,2008,2018.0,Acquisition,7.5,7.5,57.5,Git hosting,SaaS Platform,Developer collaboration
+Red Hat,1993,2019.0,Acquisition,34.0,34.0,2.1,Linux/RHEL,Support + Enterprise,Enterprise Linux support
+GitLab,2011,2021.0,IPO,16.0,16.0,23.7,Git platform,Open Core,DevOps automation
+Elastic,2012,2018.0,IPO,7.0,7.0,68.2,Elasticsearch,Open Core,Search at scale
+MongoDB,2007,2017.0,IPO,24.0,24.0,26.8,MongoDB,Open Core,Database management
+Confluent,2014,2021.0,IPO,9.5,9.5,9.2,Apache Kafka,Open Core,Stream processing
+HashiCorp,2012,2021.0,IPO,15.2,15.2,14.8,Terraform/Vault,Open Core,Infrastructure as code
+Databricks,2013,,Private,43.0,43.0,39.0,Apache Spark,Cloud Platform,ML/AI platform
+Snowflake,2012,2020.0,IPO,70.0,70.0,4.2,Data Cloud,Cloud Platform,Data warehouse
+Docker,2010,,Private,1.1,1.1,68.7,Containerization,Enterprise Platform,Container orchestration
