@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Cases Guide | Open Source Competitive Advantage</title>
+    <meta name="description" content="Complete guide showing how different users - startups, investors, researchers, and developers - can effectively use our open source research platform">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #fafafa;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+        }
+        
+        .nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+        
+        .logo {
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+        
+        .back-link {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        
+        .back-link:hover {
+            opacity: 0.8;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .content {
+            background: white;
+            padding: 3rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            color: #2d3748;
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 1rem;
+            text-align: center;
+        }
+        
+        h2 {
+            color: #4a5568;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 0.5rem;
+            margin: 2rem 0 1rem 0;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        h3 {
+            color: #667eea;
+            margin: 1.5rem 0 0.5rem 0;
+            font-size: 1.3rem;
+        }
+        
+        .intro-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+            text-align: center;
+        }
+        
+        .user-personas {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .persona-card {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 2rem;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .persona-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        }
+        
+        .persona-icon {
+            font-size: 3rem;
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+        
+        .persona-title {
+            color: #2d3748;
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+        
+        .persona-description {
+            color: #4a5568;
+            text-align: center;
+            margin-bottom: 1.5rem;
+            font-style: italic;
+        }
+        
+        .use-case {
+            background: white;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 2rem;
+            margin: 2rem 0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        
+        .use-case-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid #f1f5f9;
+        }
+        
+        .use-case-icon {
+            font-size: 2.5rem;
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .use-case-title {
+            color: #2d3748;
+            font-size: 1.4rem;
+            font-weight: bold;
+        }
+        
+        .use-case-subtitle {
+            color: #667eea;
+            font-size: 1rem;
+        }
+        
+        .journey-steps {
+            display: grid;
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+        
+        .step {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            padding: 1rem;
+            background: #f8fafc;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+        }
+        
+        .step-number {
+            background: #667eea;
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+        
+        .step-content {
+            flex: 1;
+        }
+        
+        .step-title {
+            font-weight: bold;
+            color: #2d3748;
+            margin-bottom: 0.5rem;
+        }
+        
+        .step-description {
+            color: #4a5568;
+            margin-bottom: 0.5rem;
+        }
+        
+        .step-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+        
+        .step-link {
+            background: #667eea;
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+        
+        .step-link:hover {
+            background: #5a67d8;
+            transform: translateY(-1px);
+        }
+        
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+        
+        .tool-card {
+            background: white;
+            border: 2px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 1.5rem;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        
+        .tool-card:hover {
+            border-color: #667eea;
+            transform: translateY(-2px);
+        }
+        
+        .tool-icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        
+        .tool-title {
+            color: #2d3748;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+        
+        .tool-description {
+            color: #4a5568;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+        
+        .highlight-box {
+            background: linear-gradient(135deg, #48bb78 0%, #38a169 100%);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+            text-align: center;
+        }
+        
+        .warning-box {
+            background: #fff5f5;
+            border: 1px solid #fed7d7;
+            border-left: 4px solid #f56565;
+            padding: 1rem;
+            border-radius: 5px;
+            margin: 1.5rem 0;
+        }
+        
+        .info-box {
+            background: #ebf8ff;
+            border: 1px solid #bee3f8;
+            border-left: 4px solid #4299e1;
+            padding: 1rem;
+            border-radius: 5px;
+            margin: 1.5rem 0;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 3rem;
+            padding: 2rem;
+            background: #f8fafc;
+            border-radius: 10px;
+            color: #666;
+        }
+        
+        .footer a {
+            color: #667eea;
+            text-decoration: none;
+            margin: 0 1rem;
+        }
+        
+        .footer a:hover {
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+            
+            .content {
+                padding: 1.5rem;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .user-personas {
+                grid-template-columns: 1fr;
+            }
+            
+            .use-case-header {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .step {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="logo">👥 User Cases Guide</div>
+            <a href="/opensource-zero-to-hero/" class="back-link">← Back to Home</a>
+        </nav>
+    </header>
+    
+    <div class="container">
+        <div class="content">
+            <h1>👥 User Cases & Application Guide</h1>
+            
+            <div class="intro-section">
+                <h2 style="color: white; border: none; margin: 0 0 1rem 0;">How to Use This Platform Effectively</h2>
+                <p>Whether you're a startup founder, investor, researcher, or developer, this guide shows you exactly how to leverage our open source competitive advantage research for your specific needs.</p>
+            </div>
+            
+            <h2>🎭 User Personas</h2>
+            <div class="user-personas">
+                <div class="persona-card">
+                    <div class="persona-icon">🚀</div>
+                    <div class="persona-title">Startup Founder</div>
+                    <div class="persona-description">Looking to validate open source strategy and build competitive advantage</div>
+                </div>
+                
+                <div class="persona-card">
+                    <div class="persona-icon">💰</div>
+                    <div class="persona-title">VC Investor</div>
+                    <div class="persona-description">Evaluating open source startups and understanding market dynamics</div>
+                </div>
+                
+                <div class="persona-card">
+                    <div class="persona-icon">📊</div>
+                    <div class="persona-title">Business Analyst</div>
+                    <div class="persona-description">Researching market trends and competitive landscape analysis</div>
+                </div>
+                
+                <div class="persona-card">
+                    <div class="persona-icon">👨‍💻</div>
+                    <div class="persona-title">Developer/CTO</div>
+                    <div class="persona-description">Making technical decisions about open source adoption</div>
+                </div>
+            </div>
+            
+            <!-- Startup Founder Use Case -->
+            <div class="use-case">
+                <div class="use-case-header">
+                    <div class="use-case-icon">🚀</div>
+                    <div>
+                        <div class="use-case-title">Startup Founder Journey</div>
+                        <div class="use-case-subtitle">Building an Open Source Strategy</div>
+                    </div>
+                </div>
+                
+                <div class="journey-steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <div class="step-title">📈 Validate Market Opportunity</div>
+                            <div class="step-description">Start by understanding the funding landscape and market size for open source companies in your sector.</div>
+                            <div class="step-links">
+                                <a href="/opensource-zero-to-hero/docs/funding-report.html" class="step-link">2025 Funding Report</a>
+                                <a href="/opensource-zero-to-hero/visuals/charts/market-dashboard.html" class="step-link">Market Dashboard</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <div class="step-title">💼 Build Business Case</div>
+                            <div class="step-description">Create compelling arguments for open source strategy using proven data and frameworks.</div>
+                            <div class="step-links">
+                                <a href="/opensource-zero-to-hero/docs/business-case.html" class="step-link">Business Case Analysis</a>
+                                <a href="/opensource-zero-to-hero/tools/calculators/roi-calculator.html" class="step-link">ROI Calculator</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <div class="step-title">🎯 Study Success Stories</div>
+                            <div class="step-description">Learn from companies that successfully monetized open source to avoid common pitfalls.</div>
+                            <div class="step-links">
+                                <a href="/opensource-zero-to-hero/docs/github-case-study.html" class="step-link">GitHub Case</a>
+                                <a href="/opensource-zero-to-hero/docs/redis-case-study.html" class="step-link">Redis Case</a>
+                                <a href="/opensource-zero-to-hero/docs/huggingface-case-study.html" class="step-link">HuggingFace Case</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <div class="step-title">💰 Calculate Valuation</div>
+                            <div class="step-description">Use specialized models to estimate your company's potential valuation as an open source business.</div>
+                            <div class="step-links">
+                                <a href="/opensource-zero-to-hero/tools/calculators/valuation-model.html" class="step-link">Valuation Calculator</a>
+                                <a href="/opensource-zero-to-hero/docs/valuation-models.html" class="step-link">Valuation Models</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- VC Investor Use Case -->
+            <div class="use-case">
+                <div class="use-case-header">
+                    <div class="use-case-icon">💰</div>
+                    <div>
+                        <div class="use-case-title">VC Investor Journey</div>
+                        <div class="use-case-subtitle">Due Diligence & Investment Decisions</div>
+                    </div>
+                </div>
+                
+                <div class="journey-steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <div class="step-title">🔍 Market Analysis</div>
+                            <div class="step-description">Understand sector trends, funding patterns, and growth trajectories in open source.</div>
+                            <div class="step-links">
+                                <a href="/opensource-zero-to-hero/docs/funding-report.html" class="step-link">Funding Report</a>
+                                <a href="/opensource-zero-to-hero/images/growth_trends.png" class="step-link">Growth Trends</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <div class="step-title">📋 Due Diligence Framework</div>
+                            <div class="step-description">Use specialized checklists designed for evaluating open source startups.</div>
+                            <div class="step-links">
+                                <a href="/opensource-zero-to-hero/docs/investor-guide.html" class="step-link">Investor Guide</a>
+                                <a href="/opensource-zero-to-hero/docs/due-diligence.html" class="step-link">DD Checklist</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <div class="step-title">⭐ Community Evaluation</div>
+                            <div class="step-description">Analyze correlation between GitHub metrics and exit valuations.</div>
+                            <div class="step-links">
+                                <a href="/opensource-zero-to-hero/images/github_stars_vs_exit_valuation.png" class="step-link">Stars vs Valuation</a>
+                                <a href="/opensource-zero-to-hero/docs/valuation-models.html" class="step-link">Community Metrics</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <div class="step-title">💡 Investment Decision</div>
+                            <div class="step-description">Make data-driven investment decisions using comprehensive analysis tools.</div>
+                            <div class="step-links">
+                                <a href="/opensource-zero-to-hero/tools/calculators/valuation-model.html" class="step-link">Valuation Tool</a>
+                                <a href="/opensource-zero-to-hero/visuals/presentations/os-investor-pitch-template.html" class="step-link">Pitch Template</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Business Analyst Use Case -->
+            <div class="use-case">
+                <div class="use-case-header">
+                    <div class="use-case-icon">📊</div>
+                    <div>
+                        <div class="use-case-title">Business Analyst Journey</div>
+                        <div class="use-case-subtitle">Market Research & Competitive Analysis</div>
+                    </div>
+                </div>
+                
+                <div class="journey-steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <div class="step-title">📈 Data Collection</div>
+                            <div class="step-description">Access comprehensive datasets on open source funding, companies, and market trends.</div>
+                            <div class="step-links">
+                                <a href="/opensource-zero-to-hero/data/" class="step-link">Data Directory</a>
+                                <a href="/opensource-zero-to-hero/data/open_source_sector_analysis.csv" class="step-link">Sector Data</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <div class="step-title">📊 Visualization</div>
+                            <div class="step-description">Use pre-built charts and dashboards for presentations and reports.</div>
+                            <div class="step-links">
+                                <a href="/opensource-zero-to-hero/visuals/charts/market-dashboard.html" class="step-link">Market Dashboard</a>
+                                <a href="/opensource-zero-to-hero/visuals/" class="step-link">All Visuals</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <div class="step-title">🔍 Competitive Analysis</div>
+                            <div class="step-description">Study successful open source companies and their monetization strategies.</div>
+                            <div class="step-links">
+                                <a href="/opensource-zero-to-hero/data/open_source_success_cases.csv" class="step-link">Success Cases</a>
+                                <a href="/opensource-zero-to-hero/docs/github-case-study.html" class="step-link">Detailed Cases</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <div class="step-title">📋 Report Creation</div>
+                            <div class="step-description">Create comprehensive reports using our frameworks and templates.</div>
+                            <div class="step-links">
+                                <a href="/opensource-zero-to-hero/visuals/infographics/os-advantage-stats.html" class="step-link">Infographics</a>
+                                <a href="/opensource-zero-to-hero/docs/business-case.html" class="step-link">Framework</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Developer/CTO Use Case -->
+            <div class="use-case">
+                <div class="use-case-header">
+                    <div class="use-case-icon">👨‍💻</div>
+                    <div>
+                        <div class="use-case-title">Developer/CTO Journey</div>
+                        <div class="use-case-subtitle">Technical Strategy & Open Source Adoption</div>
+                    </div>
+                </div>
+                
+                <div class="journey-steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <div class="step-title">🎯 Strategic Understanding</div>
+                            <div class="step-description">Understand business implications of open source technical decisions.</div>
+                            <div class="step-links">
+                                <a href="/opensource-zero-to-hero/docs/business-case.html" class="step-link">Business Case</a>
+                                <a href="/opensource-zero-to-hero/docs/funding-report.html" class="step-link">Market Data</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <div class="step-title">⭐ Community Metrics</div>
+                            <div class="step-description">Learn how GitHub metrics correlate with business success and valuation.</div>
+                            <div class="step-links">
+                                <a href="/opensource-zero-to-hero/images/github_stars_vs_exit_valuation.png" class="step-link">Stars Analysis</a>
+                                <a href="/opensource-zero-to-hero/docs/valuation-models.html" class="step-link">Community Value</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <div class="step-title">📚 Learn from Examples</div>
+                            <div class="step-description">Study technical strategies of successful open source companies.</div>
+                            <div class="step-links">
+                                <a href="/opensource-zero-to-hero/docs/github-case-study.html" class="step-link">GitHub Strategy</a>
+                                <a href="/opensource-zero-to-hero/docs/redis-case-study.html" class="step-link">Redis Model</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <div class="step-title">🚀 Implementation</div>
+                            <div class="step-description">Use frameworks to implement open source strategy in your organization.</div>
+                            <div class="step-links">
+                                <a href="/opensource-zero-to-hero/tools/" class="step-link">All Tools</a>
+                                <a href="/opensource-zero-to-hero/community/" class="step-link">Community</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <h2>🛠️ Key Tools & Resources</h2>
+            <div class="tools-grid">
+                <div class="tool-card">
+                    <div class="tool-icon">💰</div>
+                    <div class="tool-title">Valuation Calculator</div>
+                    <div class="tool-description">Calculate company valuation using open source metrics</div>
+                    <a href="/opensource-zero-to-hero/tools/calculators/valuation-model.html" class="step-link">Use Tool</a>
+                </div>
+                
+                <div class="tool-card">
+                    <div class="tool-icon">📊</div>
+                    <div class="tool-title">Market Dashboard</div>
+                    <div class="tool-description">Interactive charts and market analysis</div>
+                    <a href="/opensource-zero-to-hero/visuals/charts/market-dashboard.html" class="step-link">View Dashboard</a>
+                </div>
+                
+                <div class="tool-card">
+                    <div class="tool-icon">📋</div>
+                    <div class="tool-title">Due Diligence Checklist</div>
+                    <div class="tool-description">Comprehensive evaluation framework</div>
+                    <a href="/opensource-zero-to-hero/docs/due-diligence.html" class="step-link">Use Checklist</a>
+                </div>
+                
+                <div class="tool-card">
+                    <div class="tool-icon">📈</div>
+                    <div class="tool-title">ROI Calculator</div>
+                    <div class="tool-description">Calculate return on open source investment</div>
+                    <a href="/opensource-zero-to-hero/tools/calculators/roi-calculator.html" class="step-link">Calculate ROI</a>
+                </div>
+            </div>
+            
+            <div class="highlight-box">
+                <h3 style="color: white; margin: 0 0 1rem 0;">🎯 Pro Tips for Maximum Value</h3>
+                <p><strong>Start with your specific role</strong> - Follow the journey that matches your position and goals</p>
+                <p><strong>Use the interactive tools</strong> - Don't just read, calculate and experiment with the data</p>
+                <p><strong>Study the case studies</strong> - Real examples provide the most actionable insights</p>
+                <p><strong>Join the community</strong> - Share your experiences and learn from others</p>
+            </div>
+            
+            <div class="info-box">
+                <h4>💡 Quick Start Recommendations</h4>
+                <ul>
+                    <li><strong>New to open source business?</strong> Start with the <a href="/opensource-zero-to-hero/docs/business-case.html">Business Case Analysis</a></li>
+                    <li><strong>Need data quickly?</strong> Go to the <a href="/opensource-zero-to-hero/visuals/charts/market-dashboard.html">Market Dashboard</a></li>
+                    <li><strong>Evaluating a company?</strong> Use the <a href="/opensource-zero-to-hero/docs/investor-guide.html">Investor Guide</a></li>
+                    <li><strong>Building a pitch?</strong> Check the <a href="/opensource-zero-to-hero/visuals/presentations/os-investor-pitch-template.html">Pitch Template</a></li>
+                </ul>
+            </div>
+            
+            <div class="warning-box">
+                <h4>⚠️ Important Notes</h4>
+                <ul>
+                    <li>Data is updated regularly - check the latest versions before making decisions</li>
+                    <li>Use multiple data points for validation - don't rely on single metrics</li>
+                    <li>Consider your specific context - adapt frameworks to your situation</li>
+                    <li>Contribute back - help improve the research for everyone</li>
+                </ul>
+            </div>
+            
+            <div class="footer">
+                <p>
+                    <a href="https://github.com/NickScherbakov/opensource-zero-to-hero">📚 GitHub Repository</a>
+                    <a href="/opensource-zero-to-hero/sitemap.html">🗺️ Site Map</a>
+                    <a href="/opensource-zero-to-hero/community/">👥 Community</a>
+                    <a href="/opensource-zero-to-hero/contributing.html">🤝 Contribute</a>
+                </p>
+                <p style="margin-top: 1rem; font-size: 0.9rem;">
+                    © 2025 Open Source Competitive Advantage Project | 
+                    Licensed under <a href="/opensource-zero-to-hero/LICENSE">MIT & CC BY 4.0</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
