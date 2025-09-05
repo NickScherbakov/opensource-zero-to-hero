@@ -61,4 +61,4 @@ fig.update_xaxes(title='GitHub Stars (k)', tickformat='.0f')
 fig.update_yaxes(title='Exit Val ($b)', tickformat='.0f')
 
 # Save the chart
-fig.write_image('github_stars_vs_exit_valuation.png')
+fig.write_image('images/github_stars_vs_exit_valuation.png')

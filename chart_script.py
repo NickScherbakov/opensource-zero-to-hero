@@ -38,4 +38,4 @@ fig.update_traces(
                   "<extra></extra>"
 )
 
-fig.write_image("funding_by_sector.png")
+fig.write_image("images/funding_by_sector.png")
