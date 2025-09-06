@@ -11,6 +11,9 @@
     <meta property="og:description" content="Data-driven research on why open source drives superior business outcomes">
     <meta property="og:type" content="website">
     
+    <!-- Plausible Analytics (Privacy-friendly) -->
+    <script defer data-domain="nickscherbakov.github.io" src="https://plausible.io/js/script.js"></script>
+    
     <style>
         * {
             margin: 0;
@@ -678,6 +681,21 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="footer-content">
+            <!-- Feedback Section -->
+            <div style="background: rgba(255,255,255,0.1); padding: 2rem; border-radius: 10px; margin-bottom: 2rem; text-align: center;">
+                <h3 style="margin-bottom: 1rem;">📝 Was this research helpful?</h3>
+                <div style="display: flex; justify-content: center; gap: 1rem; margin-bottom: 1rem;">
+                    <button onclick="provideFeedback('yes')" style="background: #27ae60; color: white; border: none; padding: 0.5rem 1rem; border-radius: 5px; cursor: pointer;">👍 Yes, very helpful!</button>
+                    <button onclick="provideFeedback('no')" style="background: #e74c3c; color: white; border: none; padding: 0.5rem 1rem; border-radius: 5px; cursor: pointer;">👎 Could be better</button>
+                </div>
+                <div id="feedback-form" style="display: none; margin-top: 1rem;">
+                    <textarea id="feedback-text" placeholder="What could we improve?" style="width: 100%; max-width: 400px; height: 80px; padding: 0.5rem; border: none; border-radius: 5px; margin-bottom: 1rem;"></textarea>
+                    <br>
+                    <button onclick="submitFeedback()" style="background: #667eea; color: white; border: none; padding: 0.5rem 1rem; border-radius: 5px; cursor: pointer;">Send Feedback</button>
+                </div>
+                <div id="feedback-thanks" style="display: none; color: #27ae60; font-weight: bold;">Thank you for your feedback! 🙏</div>
+            </div>
+            
             <div class="footer-links">
                 <a href="https://github.com/NickScherbakov/opensource-zero-to-hero">GitHub Repository</a>
                 <a href="docs/business-case/business-case-analysis.html">Business Case</a>
@@ -779,6 +797,39 @@
         const statsSection = document.querySelector('.stats-section');
         if (statsSection) {
             statsObserver.observe(statsSection);
+        }
+
+        // Feedback functions
+        function provideFeedback(type) {
+            if (type === 'yes') {
+                document.getElementById('feedback-thanks').style.display = 'block';
+                document.getElementById('feedback-form').style.display = 'none';
+                
+                // Track positive feedback
+                if (window.plausible) {
+                    plausible('Positive Feedback');
+                }
+            } else {
+                document.getElementById('feedback-form').style.display = 'block';
+            }
+        }
+
+        function submitFeedback() {
+            const feedbackText = document.getElementById('feedback-text').value;
+            
+            // Track feedback submission
+            if (window.plausible) {
+                plausible('Feedback Submitted', {
+                    props: { feedback: feedbackText.substring(0, 100) }
+                });
+            }
+            
+            // Show thanks and hide form
+            document.getElementById('feedback-thanks').style.display = 'block';
+            document.getElementById('feedback-form').style.display = 'none';
+            
+            // In real implementation, send to server or email
+            console.log('Feedback submitted:', feedbackText);
         }
     </script>
 </body>
