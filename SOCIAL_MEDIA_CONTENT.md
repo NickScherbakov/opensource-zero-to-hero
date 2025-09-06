@@ -1,5 +1,7 @@
 # 🔥 TWEET-READY CONTENT
 
+> **🤖 AI Transparency Notice:** This social media content was created with GitHub Copilot AI assistance. The research data is based on real market analysis, but users should validate claims independently.
+
 [← Back to Homepage](/) | [📈 View Project](https://github.com/NickScherbakov/opensource-zero-to-hero) | [🛠️ Interactive Tools](/tools/) | [🎨 Visual Resources](/visuals/)
 
 ---
