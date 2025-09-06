@@ -1,4 +1,10 @@
-# 📊 Open Source Competit>> **🎮 Pro Tip:** Try the AI VC Advisor first - it's trained on all our research and gives personalized advice!
+# 📊 Open Source Competit>> **🎮 Pro Ti>> **---
+
+![Open Source Advantage](https://img.shields.io/badge/Open%20Source-Competitive%20Advantage-success) the AI VC Advisor first - it's trained on all our research and gives personalized advice!
+
+---
+
+![Open Source Advantage](https://img.shields.io/badge/Open%20Source-Competitive%20Advantage-success)VC Advisor first - it's trained on all our research and gives personalized advice!
 
 ---Research & Tools
 
@@ -8,7 +14,19 @@
 
 > 💡 **"The most successful software companies of our time aren't built on proprietary code—they're built on open source strategy."** — Analysis of 800+ VC-backed companies | **🌟 2,000+ developers** use this research to guide their startup decisions
 
-![Key Statistics](https://via.placeholder.com/800x200/667eea/ffffff?text=7.6x+Higher+IPO+Valuations+%7C+16x+M%26A+Multiples+%7C+800%2B+Companies+Analyzed)
+---
+<div align="center">
+
+### 📊 **KEY RESEARCH FINDINGS**
+
+| 🚀 **IPO Valuations** | ⚡ **M&A Multiples** | 📈 **Companies Analyzed** |
+|:---:|:---:|:---:|
+| **7.6x Higher** | **16x Higher** | **800+ Companies** |
+| *vs proprietary software* | *strategic acquisitions* | *2000-2025 data* |
+
+</div>
+
+---
 
 ⚠️ **Research Disclaimer**: This analysis focuses on VC-backed commercial open source companies (12% of total OSS ecosystem). 70%+ of OSS startups fail to achieve sustainable revenue. Results not typical for pure OSS projects. [Read full methodology →](DISCLAIMER.md) | [View sources →](SOURCES.md)
 
