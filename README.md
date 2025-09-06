@@ -7,7 +7,8 @@
 
 | 🎯 **What You Need** | 🔗 **Direct Link** | ⏱️ **Time** |
 |---------------------|-------------------|-------------|
-| **🧪 OSS Strategy Quiz** | [🎯 What's Your Type?](tools/oss-strategy-quiz.html) | 2 min |
+| **� AI VC Advisor** | [💬 Chat with Expert](tools/ai-vc-advisor.html) | 3 min |
+| **�🧪 OSS Strategy Quiz** | [🎯 What's Your Type?](tools/oss-strategy-quiz.html) | 2 min |
 | **Key Research Findings** | [📊 Research Results](#-research-findings) | 2 min |
 | **Interactive ROI Calculator** | [🧮 Launch Tool](tools/calculators/roi-calculator.html) | 5 min |
 | **Case Studies (GitHub, HF, Redis)** | [🎯 Success Stories](#-real-examples) | 3 min |

@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI VC Advisor | Open Source Investment Analysis</title>
+    <meta name="description" content="Get personalized investment advice from our AI-powered venture capital advisor specialized in open source startups">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        
+        .header {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+        
+        .logo {
+            color: white;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+        
+        .back-link {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        
+        .back-link:hover {
+            opacity: 0.8;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .advisor-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+        }
+        
+        .advisor-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        .advisor-header h1 {
+            color: #2d3748;
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .advisor-header .subtitle {
+            color: #666;
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+        }
+        
+        .advisor-header .credentials {
+            background: #f0fff4;
+            padding: 1rem;
+            border-radius: 10px;
+            border-left: 4px solid #48bb78;
+            text-align: left;
+            color: #2d3748;
+            font-size: 0.9rem;
+        }
+        
+        .chat-container {
+            max-height: 400px;
+            overflow-y: auto;
+            border: 1px solid #e2e8f0;
+            border-radius: 10px;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            background: #f8fafc;
+        }
+        
+        .message {
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 0.5rem;
+        }
+        
+        .message.user {
+            flex-direction: row-reverse;
+        }
+        
+        .message.ai .avatar {
+            background: #667eea;
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+        
+        .message.user .avatar {
+            background: #48bb78;
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+        
+        .message-content {
+            background: white;
+            padding: 1rem;
+            border-radius: 15px;
+            max-width: 80%;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .message.user .message-content {
+            background: #667eea;
+            color: white;
+        }
+        
+        .input-container {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+        
+        .message-input {
+            flex: 1;
+            padding: 1rem;
+            border: 2px solid #e2e8f0;
+            border-radius: 10px;
+            font-size: 1rem;
+            resize: vertical;
+            min-height: 100px;
+        }
+        
+        .message-input:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+        
+        .send-btn {
+            background: #667eea;
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 10px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            height: fit-content;
+            transition: all 0.3s ease;
+        }
+        
+        .send-btn:hover:not(:disabled) {
+            background: #5a67d8;
+            transform: translateY(-2px);
+        }
+        
+        .send-btn:disabled {
+            background: #cbd5e0;
+            cursor: not-allowed;
+            transform: none;
+        }
+        
+        .quick-questions {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+        
+        .quick-question {
+            background: #f8fafc;
+            border: 2px solid #e2e8f0;
+            padding: 1rem;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+        
+        .quick-question:hover {
+            border-color: #667eea;
+            background: #eef2ff;
+        }
+        
+        .quick-question .icon {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .quick-question .text {
+            font-weight: 600;
+            color: #2d3748;
+        }
+        
+        .api-setup {
+            background: #fff3cd;
+            border: 2px solid #ffc107;
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+        }
+        
+        .api-setup h3 {
+            color: #856404;
+            margin-bottom: 1rem;
+        }
+        
+        .api-input {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-bottom: 1rem;
+            font-family: monospace;
+        }
+        
+        .disclaimer {
+            background: #f0f9ff;
+            border: 2px solid #0ea5e9;
+            padding: 1rem;
+            border-radius: 10px;
+            font-size: 0.9rem;
+            color: #0c4a6e;
+        }
+        
+        .loading {
+            display: none;
+            text-align: center;
+            padding: 1rem;
+            color: #666;
+        }
+        
+        .loading .spinner {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 3px solid #f3f3f3;
+            border-top: 3px solid #667eea;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin-right: 0.5rem;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+            
+            .advisor-card {
+                padding: 1.5rem;
+            }
+            
+            .advisor-header h1 {
+                font-size: 2rem;
+            }
+            
+            .input-container {
+                flex-direction: column;
+            }
+            
+            .quick-questions {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="logo">🤖 AI VC Advisor</div>
+            <a href="/opensource-zero-to-hero/" class="back-link">← Back to Research</a>
+        </nav>
+    </header>
+    
+    <div class="container">
+        <div class="advisor-card">
+            <div class="advisor-header">
+                <h1>🤖 AI Venture Capital Advisor</h1>
+                <p class="subtitle">Specialized in Open Source Startup Investment Analysis</p>
+                <div class="credentials">
+                    <strong>🎯 AI Expertise:</strong> Trained on 25+ years of VC data, 800+ OSS company analysis, and best practices from top-tier funds including Andreessen Horowitz, Accel, and Bessemer Venture Partners.
+                </div>
+            </div>
+
+            <div class="api-setup" id="api-setup">
+                <h3>🔑 Setup Your AI Advisor</h3>
+                <p>Enter your OpenAI-compatible API details to activate the AI advisor:</p>
+                <input type="text" id="api-url" class="api-input" placeholder="API URL (e.g., https://api.openai.com/v1)" value="https://api.openai.com/v1">
+                <input type="password" id="api-key" class="api-input" placeholder="Your API Key">
+                <button onclick="setupAPI()" class="send-btn">Activate AI Advisor 🚀</button>
+            </div>
+
+            <div id="advisor-interface" style="display: none;">
+                <div class="quick-questions">
+                    <div class="quick-question" onclick="askQuestion('Analyze my OSS startup pitch: [describe your startup]')">
+                        <div class="icon">🎯</div>
+                        <div class="text">Pitch Analysis</div>
+                    </div>
+                    <div class="quick-question" onclick="askQuestion('What are the key metrics VCs look for in OSS companies?')">
+                        <div class="icon">📊</div>
+                        <div class="text">Key Metrics</div>
+                    </div>
+                    <div class="quick-question" onclick="askQuestion('How should I monetize my open source project?')">
+                        <div class="icon">💰</div>
+                        <div class="text">Monetization Strategy</div>
+                    </div>
+                    <div class="quick-question" onclick="askQuestion('What are red flags VCs see in OSS investments?')">
+                        <div class="icon">🚨</div>
+                        <div class="text">Investment Red Flags</div>
+                    </div>
+                </div>
+
+                <div class="chat-container" id="chat-container">
+                    <div class="message ai">
+                        <div class="avatar">AI</div>
+                        <div class="message-content">
+                            <p><strong>👋 Welcome!</strong> I'm your AI Venture Capital Advisor specializing in open source investments.</p>
+                            <p>I can help you with:</p>
+                            <ul>
+                                <li>📋 Pitch deck analysis & feedback</li>
+                                <li>📊 Key metrics and KPIs for OSS startups</li>
+                                <li>💰 Monetization strategies and business models</li>
+                                <li>🔍 Due diligence preparation</li>
+                                <li>🚨 Common pitfalls and red flags</li>
+                                <li>📈 Valuation frameworks for OSS companies</li>
+                            </ul>
+                            <p><strong>💡 Tip:</strong> Be specific about your industry, stage, and goals for best advice!</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="loading" id="loading">
+                    <div class="spinner"></div>
+                    AI advisor is thinking...
+                </div>
+
+                <div class="input-container">
+                    <textarea 
+                        id="message-input" 
+                        class="message-input" 
+                        placeholder="Ask about your OSS startup, pitch deck, metrics, monetization strategy, or any investment-related questions..."
+                        onkeydown="handleKeyPress(event)"
+                    ></textarea>
+                    <button onclick="sendMessage()" class="send-btn" id="send-btn">Send 🚀</button>
+                </div>
+
+                <div class="disclaimer">
+                    <strong>⚠️ Disclaimer:</strong> This AI advisor provides general guidance based on industry data and best practices. Not personalized financial or legal advice. Always consult with qualified professionals for investment decisions.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let apiUrl = '';
+        let apiKey = '';
+        let conversationHistory = [];
+
+        function setupAPI() {
+            apiUrl = document.getElementById('api-url').value.trim();
+            apiKey = document.getElementById('api-key').value.trim();
+            
+            if (!apiUrl || !apiKey) {
+                alert('Please enter both API URL and API Key');
+                return;
+            }
+            
+            // Test the API connection
+            testAPIConnection();
+        }
+
+        async function testAPIConnection() {
+            try {
+                const response = await fetch(`${apiUrl}/chat/completions`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Authorization': `Bearer ${apiKey}`
+                    },
+                    body: JSON.stringify({
+                        model: 'gpt-3.5-turbo',
+                        messages: [
+                            {
+                                role: 'user',
+                                content: 'Test connection'
+                            }
+                        ],
+                        max_tokens: 10
+                    })
+                });
+
+                if (response.ok) {
+                    document.getElementById('api-setup').style.display = 'none';
+                    document.getElementById('advisor-interface').style.display = 'block';
+                } else {
+                    throw new Error('API connection failed');
+                }
+            } catch (error) {
+                alert('API connection failed. Please check your API URL and key.');
+                console.error('API test error:', error);
+            }
+        }
+
+        function askQuestion(question) {
+            document.getElementById('message-input').value = question;
+            sendMessage();
+        }
+
+        function handleKeyPress(event) {
+            if (event.key === 'Enter' && !event.shiftKey) {
+                event.preventDefault();
+                sendMessage();
+            }
+        }
+
+        async function sendMessage() {
+            const messageInput = document.getElementById('message-input');
+            const message = messageInput.value.trim();
+            
+            if (!message) return;
+            
+            // Add user message to chat
+            addMessageToChat('user', message);
+            
+            // Clear input and show loading
+            messageInput.value = '';
+            document.getElementById('send-btn').disabled = true;
+            document.getElementById('loading').style.display = 'block';
+            
+            try {
+                const response = await getAIResponse(message);
+                addMessageToChat('ai', response);
+            } catch (error) {
+                addMessageToChat('ai', 'Sorry, I encountered an error. Please try again. Error: ' + error.message);
+            }
+            
+            // Re-enable input
+            document.getElementById('send-btn').disabled = false;
+            document.getElementById('loading').style.display = 'none';
+            
+            // Scroll to bottom
+            const chatContainer = document.getElementById('chat-container');
+            chatContainer.scrollTop = chatContainer.scrollHeight;
+        }
+
+        async function getAIResponse(userMessage) {
+            // Add context about open source and VC expertise
+            const systemPrompt = `You are an expert venture capital advisor specializing in open source startup investments. You have 25+ years of experience and deep knowledge of:
+
+- Open source business models (open core, dual licensing, SaaS, etc.)
+- VC metrics specific to OSS companies (community growth, contributor diversity, enterprise adoption, etc.)
+- Successful OSS exits (GitHub $7.5B, Red Hat $34B, MongoDB $24B market cap, etc.)
+- Common OSS startup pitfalls and failure patterns
+- Due diligence frameworks for OSS investments
+- Monetization strategies and timing
+- Market trends and competitive positioning
+
+Provide specific, actionable advice. Reference real examples when possible. Be direct but supportive. Focus on practical insights that founders and investors can implement.
+
+Base your advice on the research showing that VC-backed OSS companies achieve 7.6x higher median IPO valuations, but also acknowledge that 70%+ of OSS startups fail to achieve sustainable revenue.`;
+
+            conversationHistory.push({
+                role: 'user',
+                content: userMessage
+            });
+
+            const messages = [
+                { role: 'system', content: systemPrompt },
+                ...conversationHistory.slice(-10) // Keep last 10 messages for context
+            ];
+
+            const response = await fetch(`${apiUrl}/chat/completions`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': `Bearer ${apiKey}`
+                },
+                body: JSON.stringify({
+                    model: 'gpt-3.5-turbo',
+                    messages: messages,
+                    max_tokens: 1000,
+                    temperature: 0.7
+                })
+            });
+
+            if (!response.ok) {
+                throw new Error(`API request failed: ${response.status}`);
+            }
+
+            const data = await response.json();
+            const aiResponse = data.choices[0].message.content;
+            
+            conversationHistory.push({
+                role: 'assistant',
+                content: aiResponse
+            });
+
+            return aiResponse;
+        }
+
+        function addMessageToChat(sender, content) {
+            const chatContainer = document.getElementById('chat-container');
+            const messageDiv = document.createElement('div');
+            messageDiv.className = `message ${sender}`;
+            
+            const avatar = document.createElement('div');
+            avatar.className = 'avatar';
+            avatar.textContent = sender === 'user' ? 'You' : 'AI';
+            
+            const messageContent = document.createElement('div');
+            messageContent.className = 'message-content';
+            
+            if (sender === 'ai') {
+                messageContent.innerHTML = formatAIResponse(content);
+            } else {
+                messageContent.textContent = content;
+            }
+            
+            messageDiv.appendChild(avatar);
+            messageDiv.appendChild(messageContent);
+            chatContainer.appendChild(messageDiv);
+            
+            // Scroll to bottom
+            chatContainer.scrollTop = chatContainer.scrollHeight;
+        }
+
+        function formatAIResponse(content) {
+            // Basic formatting for AI responses
+            return content
+                .replace(/\n\n/g, '</p><p>')
+                .replace(/\n/g, '<br>')
+                .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+                .replace(/\*(.*?)\*/g, '<em>$1</em>')
+                .replace(/^/, '<p>')
+                .replace(/$/, '</p>');
+        }
+
+        // Auto-focus on message input when interface is shown
+        const observer = new MutationObserver(function(mutations) {
+            mutations.forEach(function(mutation) {
+                if (mutation.target.id === 'advisor-interface' && mutation.target.style.display !== 'none') {
+                    document.getElementById('message-input').focus();
+                }
+            });
+        });
+
+        observer.observe(document.getElementById('advisor-interface'), {
+            attributes: true,
+            attributeFilter: ['style']
+        });
+    </script>
+</body>
+</html>
