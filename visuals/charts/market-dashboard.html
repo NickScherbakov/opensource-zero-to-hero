@@ -11,6 +11,31 @@
             padding: 20px;
             background-color: #f5f5f5;
         }
+        .nav-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px 20px;
+            margin: -20px -20px 30px -20px;
+            border-radius: 10px 10px 0 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .nav-links {
+            display: flex;
+            gap: 15px;
+        }
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            background: rgba(255,255,255,0.2);
+            transition: background 0.3s;
+        }
+        .nav-links a:hover {
+            background: rgba(255,255,255,0.3);
+        }
         .dashboard {
             max-width: 1200px;
             margin: 0 auto;
@@ -70,6 +95,15 @@
     </style>
 </head>
 <body>
+    <div class="nav-header">
+        <div class="logo">🚀 Open Source Advantage</div>
+        <div class="nav-links">
+            <a href="../../index.html">🏠 Home</a>
+            <a href="../index.html">🎨 Visuals</a>
+            <a href="../../sitemap.html">🗺️ Site Map</a>
+            <a href="../../user-cases-guide.html">👥 User Guide</a>
+        </div>
+    </div>
     <div class="dashboard">
         <h1>📊 Open Source Market Dashboard</h1>
         
