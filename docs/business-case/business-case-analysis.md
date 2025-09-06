@@ -1,5 +1,9 @@
 # The Business Case for Open Source as Competitive Advantage
 
+[← Back to Homepage](/) | [📊 Business Case Directory](./) | [🧮 ROI Calculator](../../tools/calculators/roi-calculator.html) | [📈 Valuation Models](../investor-guide/valuation-models.md) | [🏠 Site Map](../../sitemap.html)
+
+---
+
 ## Executive Summary
 
 Open source software (OSS) has evolved from a niche development approach to a dominant competitive strategy that drives superior business outcomes. This comprehensive analysis demonstrates that **open source companies achieve 7x higher IPO valuations and 14x higher M&A multiples** compared to proprietary software companies, fundamentally changing how we think about intellectual property and competitive moats.

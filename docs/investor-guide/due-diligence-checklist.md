@@ -1,5 +1,9 @@
 # Due Diligence Checklist for Open Source Investments
 
+[← Back to Homepage](/) | [📊 Investor Guide Directory](./) | [📈 Valuation Models](valuation-models.md) | [🔍 DD Framework](investor-dd-framework.md) | [🏠 Site Map](../../sitemap.html)
+
+---
+
 ## Executive Summary
 
 This comprehensive checklist provides investors with a systematic framework for evaluating open source startup opportunities, covering technical, community, business, and market factors.

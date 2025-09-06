@@ -1,5 +1,9 @@
 # Contributing to Open Source Competitive Advantage
 
+[← Back to Homepage](/) | [💬 Discussions](https://github.com/NickScherbakov/opensource-zero-to-hero/discussions) | [📋 Code of Conduct](CODE_OF_CONDUCT.md) | [🤝 Community](community/) | [🏠 Site Map](sitemap.html)
+
+---
+
 We welcome contributions from researchers, entrepreneurs, investors, developers, and anyone passionate about demonstrating the competitive advantages of open source.
 
 ## 🎯 How to Contribute

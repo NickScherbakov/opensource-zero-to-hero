@@ -1,5 +1,9 @@
 # 🔥 TWEET-READY CONTENT
 
+[← Back to Homepage](/) | [📈 View Project](https://github.com/NickScherbakov/opensource-zero-to-hero) | [🛠️ Interactive Tools](/tools/) | [🎨 Visual Resources](/visuals/)
+
+---
+
 ## 📱 **Twitter Threads Ready to Post**
 
 ### Thread 1: "Mind-blowing open source stats 🧵"

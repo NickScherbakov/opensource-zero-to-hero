@@ -1,5 +1,9 @@
 # Redis: From Open Source Project to $2B Valuation
 
+[← Back to Homepage](/) | [📚 Case Studies Directory](./) | [🐙 GitHub](github-story.md) | [🤗 Hugging Face](huggingface-journey.md) | [🏠 Site Map](../../sitemap.html)
+
+---
+
 ## Overview
 - **Founded**: 2011 by Salvatore Sanfilippo, Yiftach Shoolman
 - **Open Source Strategy**: Core database + enterprise features

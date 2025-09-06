@@ -1,5 +1,9 @@
 # Valuation Models for Open Source Companies
 
+[← Back to Homepage](/) | [📊 Investor Guide Directory](./) | [🧮 Valuation Calculator](../../tools/calculators/valuation-model.html) | [✅ Due Diligence Checklist](due-diligence-checklist.md) | [🏠 Site Map](../../sitemap.html)
+
+---
+
 ## Overview
 
 This document provides specialized valuation methodologies for evaluating open source companies, taking into account unique characteristics such as community dynamics, adoption patterns, and monetization models.

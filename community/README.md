@@ -1,5 +1,9 @@
 # Community
 
+[← Back to Homepage](/) | [💬 Discussions](https://github.com/NickScherbakov/opensource-zero-to-hero/discussions) | [🤝 Contributing](../CONTRIBUTING.md) | [📋 Code of Conduct](../CODE_OF_CONDUCT.md)
+
+---
+
 Welcome to the Open Source Competitive Advantage community!
 
 ## How to Engage

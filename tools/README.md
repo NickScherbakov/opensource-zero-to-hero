@@ -1,5 +1,9 @@
 # Tools
 
+[← Back to Homepage](/) | [🛠️ Interactive Tools](calculators/) | [🎨 Visual Resources](../visuals/) | [📊 Data Resources](../data/)
+
+---
+
 This directory contains calculators, templates, and other tools for analyzing open source competitive advantage.
 
 ## Available Tools

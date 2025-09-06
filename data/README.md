@@ -1,5 +1,9 @@
 # Data Repository
 
+[← Back to Homepage](/) | [📊 Raw Data](.) | [🎨 Visualizations](../visuals/) | [🛠️ Analysis Tools](../tools/) | [📑 Documentation](../docs/)
+
+---
+
 This directory contains datasets, metrics, and analysis supporting the open source competitive advantage research.
 
 ## Contents

@@ -1,5 +1,9 @@
 # Open Source Advantage Statistics Infographic
 
+[← Back to Homepage](/) | [🎨 Visuals Directory](../) | [📊 Interactive Version](os-advantage-stats.html) | [📈 Market Dashboard](../charts/market-dashboard.html) | [🏠 Site Map](../../sitemap.html)
+
+---
+
 This file represents a placeholder for the open source competitive advantage statistics infographic.
 
 ## Planned Content:

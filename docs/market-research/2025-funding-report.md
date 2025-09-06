@@ -1,5 +1,9 @@
 # 2025 Open Source Funding Report
 
+[← Back to Homepage](/) | [📊 Market Research Directory](./) | [💰 Funding Data](../../data/) | [📈 Visualizations](../../visuals/charts/) | [🏠 Site Map](../../sitemap.html)
+
+---
+
 ## Executive Summary
 
 Comprehensive analysis of open source software investments and market trends for 2025.

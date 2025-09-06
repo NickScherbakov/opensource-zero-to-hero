@@ -1,5 +1,9 @@
 # Visual Resources
 
+[← Back to Homepage](/) | [🎨 Infographics](infographics/) | [📊 Charts](charts/) | [🎯 Presentations](presentations/) | [🛠️ Tools](../tools/)
+
+---
+
 This directory contains infographics, charts, presentations, and other visual materials supporting the open source competitive advantage research.
 
 ## Contents

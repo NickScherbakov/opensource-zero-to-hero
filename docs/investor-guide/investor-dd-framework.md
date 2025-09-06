@@ -1,5 +1,9 @@
 # Investor Due Diligence Framework for Open Source Startups
 
+[← Back to Homepage](/) | [📊 Investor Guide Directory](./) | [✅ Due Diligence Checklist](due-diligence-checklist.md) | [📈 Valuation Models](valuation-models.md) | [🏠 Site Map](../../sitemap.html)
+
+---
+
 ## Executive Summary
 
 Evaluating open source startups requires a specialized framework that goes beyond traditional software company metrics. This comprehensive due diligence checklist incorporates community health, adoption dynamics, monetization readiness, and competitive moats unique to open source business models.

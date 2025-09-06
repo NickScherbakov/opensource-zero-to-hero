@@ -1,5 +1,9 @@
 # Hugging Face: AI's Open Source Unicorn
 
+[← Back to Homepage](/) | [📚 Case Studies Directory](./) | [🐙 GitHub](github-story.md) | [⚡ Redis](redis-monetization.md) | [🏠 Site Map](../../sitemap.html)
+
+---
+
 ## Overview
 - **Founded**: 2016 by Clément Delangue, Julien Chaumond, Thomas Wolf
 - **Open Source Strategy**: Open models + collaborative AI platform

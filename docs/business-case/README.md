@@ -1,5 +1,9 @@
 # Business Case Documentation
 
+[← Back to Homepage](/) | [📊 Documentation](../) | [📈 Business Analysis](business-case-analysis.md) | [🧮 ROI Calculator](../../tools/calculators/roi-calculator.html) | [🏠 Site Map](../../sitemap.html)
+
+---
+
 This directory contains comprehensive business case analysis for open source competitive advantage.
 
 ## Contents

@@ -1,5 +1,9 @@
 # Code of Conduct
 
+[← Back to Homepage](/) | [🤝 Contributing](CONTRIBUTING.md) | [💬 Community](community/) | [📞 Contact](https://github.com/NickScherbakov/opensource-zero-to-hero/discussions) | [🏠 Site Map](sitemap.html)
+
+---
+
 ## Our Pledge
 
 We as members, contributors, and leaders pledge to make participation in our community a harassment-free experience for everyone, regardless of age, body size, visible or invisible disability, ethnicity, sex characteristics, gender identity and expression, level of experience, education, socio-economic status, nationality, personal appearance, race, religion, or sexual identity and orientation.

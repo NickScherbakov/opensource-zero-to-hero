@@ -1,5 +1,9 @@
 # 🔥 Viral Content Ideas for GitHub Top Trending
 
+[← Back to Homepage](/) | [📈 View Project](https://github.com/NickScherbakov/opensource-zero-to-hero) | [🚀 Star on GitHub](https://github.com/NickScherbakov/opensource-zero-to-hero/stargazers)
+
+---
+
 ## 🎯 **Hacker News Ready Posts**
 
 ### 1. **"Show HN: Interactive Tool Calculates Your Open Source ROI"**

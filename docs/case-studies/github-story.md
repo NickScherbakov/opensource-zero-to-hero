@@ -1,5 +1,9 @@
 # GitHub: From Side Project to $7.5B Microsoft Acquisition
 
+[← Back to Homepage](/) | [📚 Case Studies Directory](./) | [🤗 Hugging Face](huggingface-journey.md) | [⚡ Redis](redis-monetization.md) | [🏠 Site Map](../../sitemap.html)
+
+---
+
 ## Overview
 - **Founded**: 2008 by Tom Preston-Werner, Chris Wanstrath, PJ Hyett
 - **Open Source Strategy**: Git hosting + collaboration tools
