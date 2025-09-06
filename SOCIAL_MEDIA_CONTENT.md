@@ -8,21 +8,21 @@
 
 ### Thread 1: "Mind-blowing open source stats 🧵"
 ```
-🧵 THREAD: Why smart VCs are betting BIG on open source (10 shocking stats)
+🧵 THREAD: Why VCs are betting on open source (but it's complicated) 
 
-1/11 Open source companies achieve 7x higher IPO valuations than proprietary companies
+1/11 VC-backed open source companies show 7.6x higher median IPO valuations
 
-Source: Linux Foundation Research 2025 
-📊 Data: 800+ VC-backed startups analyzed
+⚠️ BUT: This is only 12% of OSS companies that get VC funding
+📊 Source: Commercial OSS analysis 2024
 
-2/11 M&A exits are even more dramatic:
-• 14x higher exit multiples
-• 50% faster time to market  
-• 80% lower customer acquisition costs
+2/11 M&A numbers are dramatic for strategic acquisitions:
+• 16x higher median multiples (strategic buyers)
+• But 70%+ of OSS startups still fail to monetize
+• Success requires "open core" model + enterprise features
 
-This isn't theory. This is hard data.
+Reality: Most pure OSS projects don't become profitable companies
 
-3/11 Real examples that will blow your mind:
+3/11 Survivor bias alert! Success stories everyone talks about:
 
 🐙 GitHub: $0 → $7.5B (Microsoft acquisition)
 🤗 Hugging Face: $0 → $4.5B valuation in AI

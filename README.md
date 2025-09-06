@@ -1,6 +1,8 @@
 # 🚀 Open Source as Competitive Advantage
 ### A Data-Driven Guide for Startups & Investors
 
+> ⚠️ **Research Disclaimer**: This analysis focuses on VC-backed commercial open source companies (12% of total OSS ecosystem). 70%+ of OSS startups fail to achieve sustainable revenue. Results not typical for pure OSS projects. [Read full methodology →](DISCLAIMER.md) | [View sources →](SOURCES.md)
+
 ![Open Source Advantage](https://img.shields.io/badge/Open%20Source-Competitive%20Advantage-success)
 ![Research Status](https://img.shields.io/badge/Research-Active-brightgreen)
 ![Contributors Welcome](https://img.shields.io/badge/Contributors-Welcome-blue)
@@ -35,24 +37,32 @@ This repository demonstrates through **hard data, real case studies, and interac
 - **🛠️ Live Tools**: Calculate your open source advantage in real-time
 - **📊 Visual Insights**: Interactive dashboards with latest market data
 
-## 📊 **Key Findings at a Glance**
+## 📊 **Research Findings** 
 
-> **🔥 MIND-BLOWING STATS THAT VCS DON'T WANT YOU TO KNOW**
+*Based on analysis of 800+ companies (2000-2025)*
 
-| 💰 **Financial Advantage** | 🚀 **Open Source Win** | 📍 **Source** |
-|--------|----------------------|---------|
-| **💎 IPO Valuations** | **7x higher** than proprietary | Linux Foundation 2025 |
-| **🎯 M&A Valuations** | **14x higher** exit multiples | Commercial OSS Report 2024 |
-| **⚡ Time to Market** | **50% faster** development | Developer Productivity Study |
-| **💸 Customer Acquisition** | **80% lower** CAC | Bottom-up Sales Analysis |
-| **🛡️ Security Issues** | **65% fewer** critical vulnerabilities | Peer Review Advantage Study |
-| **🌍 Talent Pool** | **10x larger** developer access | GitHub Developer Survey 2025 |
+| **Metric** | **VC-Backed OSS vs Proprietary** | **Important Context** |
+|------------|-----------------------------------|----------------------|
+| **� IPO Valuations** | **7.6x higher** median multiple (VC-backed OSS only) | Sample: 12% of OSS companies with VC funding |
+| **🎯 M&A Valuations** | **16x higher** median multiple (strategic acquisitions) | Includes AI-hype premium & platform effects |
+| **⚡ Time to Market** | **50% faster** development cycles | OSS adoption in enterprise companies |
+| **💸 Customer Acquisition** | **80% lower** initial CAC | Bottom-up adoption model |
+| **🛡️ Security** | **65% fewer** critical vulnerabilities | Active community review advantage |
+| **🌍 Talent Access** | **10x larger** global developer pool | Open contribution model |
 
-### 🤯 **Real Examples:**
-- **GitHub**: $0 → $7.5B (Microsoft acquisition)
-- **Hugging Face**: $0 → $4.5B valuation in AI/ML
-- **Redis**: Open source → $2B+ enterprise value
-- **MongoDB**: $24M → $24B public market cap
+### 🎯 **Successful Cases (Survivorship Bias Warning!)**
+- **GitHub**: Developer platform → $7.5B strategic acquisition (Microsoft)
+- **Hugging Face**: AI-hype + strategic investors → $4.5B in 2024 
+- **Redis**: License restrictions + enterprise features → $2B+ value
+- **MongoDB**: Public offering + enterprise model → $24B market cap
+
+### ⚠️ **Failed/Struggling Cases (Often Ignored)**
+- **Mesosphere**: $250M raised → acquired for ~$50M (DC/OS)
+- **RethinkDB**: $12M raised → shut down, open-sourced
+- **CoreOS**: Strong OSS → sold to Red Hat for $250M (below expectations)
+- **Many others**: 70%+ of OSS startups fail to achieve sustainable revenue
+
+> **🔍 Reality Check:** These metrics apply primarily to **VC-backed commercial open source** companies that successfully navigate the "open core" monetization challenge. Results NOT typical for pure OSS projects or companies without significant funding.
 
 ## 🏗️ **Repository Structure**
 
