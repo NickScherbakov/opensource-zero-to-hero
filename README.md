@@ -1,7 +1,21 @@
-# 🚀 Open Source as Competitive Advantage
-### A Data-Driven Guide for Startups & Investors
+# � Open Source Competitive Advantage | Research & Tools
+> **TL;DR:** Data-driven research proving open source companies achieve 7.6x higher valuations. Interactive tools, case studies, and frameworks for startups & investors.
 
-> ⚠️ **Research Disclaimer**: This analysis focuses on VC-backed commercial open source companies (12% of total OSS ecosystem). 70%+ of OSS startups fail to achieve sustainable revenue. Results not typical for pure OSS projects. [Read full methodology →](DISCLAIMER.md) | [View sources →](SOURCES.md)
+⚠️ **Research Disclaimer**: This analysis focuses on VC-backed commercial open source companies (12% of total OSS ecosystem). 70%+ of OSS startups fail to achieve sustainable revenue. Results not typical for pure OSS projects. [Read full methodology →](DISCLAIMER.md) | [View sources →](SOURCES.md)
+
+## 📋 **Quick Navigation**
+
+| 🎯 **What You Need** | 🔗 **Direct Link** | ⏱️ **Time** |
+|---------------------|-------------------|-------------|
+| **🧪 OSS Strategy Quiz** | [🎯 What's Your Type?](tools/oss-strategy-quiz.html) | 2 min |
+| **Key Research Findings** | [📊 Research Results](#-research-findings) | 2 min |
+| **Interactive ROI Calculator** | [🧮 Launch Tool](tools/calculators/roi-calculator.html) | 5 min |
+| **Case Studies (GitHub, HF, Redis)** | [🎯 Success Stories](#-real-examples) | 3 min |
+| **Business Framework** | [💼 Business Case](docs/business-case/business-case-analysis.md) | 10 min |
+| **Investor Due Diligence** | [💰 Investor Guide](docs/investor-guide/investor-dd-framework.md) | 15 min |
+| **Social Sharing Pack** | [📱 Share Assets](#-share-this-research) | 1 min |
+
+---
 
 ![Open Source Advantage](https://img.shields.io/badge/Open%20Source-Competitive%20Advantage-success)
 ![Research Status](https://img.shields.io/badge/Research-Active-brightgreen)
@@ -325,11 +339,35 @@ Special thanks to our research contributors:
 
 ---
 
-### 🚀 **Ready to Leverage Open Source for Competitive Advantage?**
+## � **Share This Research**
 
-**For Founders**: [Start with the Business Case →](/docs/business-case/)
+Found this useful? Help spread evidence-based insights about open source competitive advantage:
 
-**For Investors**: [Review the Investor Playbook →](/docs/investor-guide/)
+### 🌟 **Star & Share**
+> **⭐ [Star this repo](https://github.com/NickScherbakov/opensource-zero-to-hero/stargazers)** to bookmark it and support open research!
+
+| Platform | Action | Link |
+|----------|--------|------|
+| **Twitter** | Share findings | [📱 Tweet](https://twitter.com/intent/tweet?text=🚨%20VC-backed%20open%20source%20companies%20show%207.6x%20higher%20IPO%20valuations!%20New%20research%20%2B%20interactive%20tools:%20https://github.com/NickScherbakov/opensource-zero-to-hero%20%23OpenSource%20%23Startups) |
+| **LinkedIn** | Professional post | [💼 Share](https://www.linkedin.com/sharing/share-offsite/?url=https://github.com/NickScherbakov/opensource-zero-to-hero) |
+| **HackerNews** | Start discussion | [🔥 Submit](https://news.ycombinator.com/submitlink?u=https://github.com/NickScherbakov/opensource-zero-to-hero&t=Open%20Source%20Competitive%20Advantage:%20Data%20from%20800%2B%20Companies) |
+| **Reddit** | r/startups discussion | [💬 Post](https://www.reddit.com/submit?url=https://github.com/NickScherbakov/opensource-zero-to-hero&title=Data-driven%20research:%20Why%20open%20source%20creates%20competitive%20advantage) |
+
+### 🎯 **Next Steps**
+**For Founders**: [📊 Calculate Your ROI](tools/calculators/roi-calculator.html) → [📋 Business Case](docs/business-case/business-case-analysis.md)
+
+**For Investors**: [🔍 Due Diligence Framework](docs/investor-guide/investor-dd-framework.md) → [📈 Valuation Models](tools/calculators/valuation-model.html)
+
+**For Researchers**: [🤝 Contribute Data](CONTRIBUTING.md) → [📚 Methodology](DISCLAIMER.md) → [🔬 Sources](SOURCES.md)
+
+---
+
+### 💬 **Join the Discussion**
+- **GitHub Discussions**: [Share your thoughts](https://github.com/NickScherbakov/opensource-zero-to-hero/discussions)
+- **Issues**: [Report problems or suggest improvements](https://github.com/NickScherbakov/opensource-zero-to-hero/issues)
+- **Contributors**: [See who's building this](https://github.com/NickScherbakov/opensource-zero-to-hero/graphs/contributors)
+
+*Built with ❤️ by the open source community. Licensed under [MIT & CC BY 4.0](LICENSE).*
 
 **For Developers**: [Explore Success Stories →](/docs/case-studies/)
 

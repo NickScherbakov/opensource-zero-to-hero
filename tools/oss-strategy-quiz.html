@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OSS Strategy Quiz | Open Source Competitive Advantage</title>
+    <meta name="description" content="Interactive quiz: What's your open source competitive advantage strategy? Get personalized recommendations.">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .quiz-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        
+        h1 {
+            color: #2d3748;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        
+        .subtitle {
+            color: #666;
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+        }
+        
+        .question {
+            margin: 2rem 0;
+            text-align: left;
+        }
+        
+        .question h3 {
+            color: #2d3748;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+        
+        .options {
+            display: grid;
+            gap: 0.5rem;
+        }
+        
+        .option {
+            padding: 1rem;
+            border: 2px solid #e2e8f0;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            background: #f8fafc;
+        }
+        
+        .option:hover {
+            border-color: #667eea;
+            background: #eef2ff;
+        }
+        
+        .option.selected {
+            border-color: #667eea;
+            background: #667eea;
+            color: white;
+        }
+        
+        .quiz-btn {
+            background: #667eea;
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 2rem;
+            transition: all 0.3s ease;
+        }
+        
+        .quiz-btn:hover {
+            background: #5a67d8;
+            transform: translateY(-2px);
+        }
+        
+        .quiz-btn:disabled {
+            background: #cbd5e0;
+            cursor: not-allowed;
+            transform: none;
+        }
+        
+        .result {
+            display: none;
+            text-align: left;
+            margin-top: 2rem;
+            padding: 2rem;
+            background: #f0fff4;
+            border-radius: 15px;
+            border: 2px solid #48bb78;
+        }
+        
+        .result h3 {
+            color: #22543d;
+            margin-bottom: 1rem;
+        }
+        
+        .result-content {
+            color: #2d3748;
+            margin-bottom: 1rem;
+        }
+        
+        .share-result {
+            background: #48bb78;
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+            margin-top: 1rem;
+        }
+        
+        .back-link {
+            display: inline-block;
+            margin-bottom: 1rem;
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        
+        .back-link:hover {
+            opacity: 0.8;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+            
+            .quiz-card {
+                padding: 1.5rem;
+            }
+            
+            h1 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="/opensource-zero-to-hero/" class="back-link">← Back to Research</a>
+        
+        <div class="quiz-card">
+            <h1>🎯 What's Your OSS Strategy Type?</h1>
+            <p class="subtitle">Discover your open source competitive advantage approach in 2 minutes</p>
+            
+            <div id="quiz-content">
+                <div class="question">
+                    <h3>1. What's your primary business goal with open source?</h3>
+                    <div class="options">
+                        <div class="option" data-value="community">Build developer community & adoption</div>
+                        <div class="option" data-value="credibility">Establish technical credibility & trust</div>
+                        <div class="option" data-value="talent">Attract top engineering talent</div>
+                        <div class="option" data-value="enterprise">Create enterprise sales opportunities</div>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <h3>2. What's your current company stage?</h3>
+                    <div class="options">
+                        <div class="option" data-value="idea">Pre-product (idea/prototype)</div>
+                        <div class="option" data-value="mvp">Early stage (MVP, <$1M revenue)</div>
+                        <div class="option" data-value="growth">Growth stage ($1M-$10M revenue)</div>
+                        <div class="option" data-value="scale">Scale stage ($10M+ revenue)</div>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <h3>3. How technical is your target customer?</h3>
+                    <div class="options">
+                        <div class="option" data-value="developer">Developers & technical teams</div>
+                        <div class="option" data-value="mixed">Mixed technical & business users</div>
+                        <div class="option" data-value="business">Business users & executives</div>
+                        <div class="option" data-value="enterprise">Enterprise IT & procurement</div>
+                    </div>
+                </div>
+
+                <button class="quiz-btn" onclick="calculateResult()" disabled>Get Your OSS Strategy 🚀</button>
+            </div>
+
+            <div id="result" class="result">
+                <h3 id="result-title"></h3>
+                <div id="result-content" class="result-content"></div>
+                <button class="share-result" onclick="shareResult()">Share My Result 📱</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let answers = {};
+        let resultData = {};
+
+        // Handle option selection
+        document.addEventListener('click', function(e) {
+            if (e.target.classList.contains('option')) {
+                const question = e.target.closest('.question');
+                const options = question.querySelectorAll('.option');
+                
+                // Remove previous selection
+                options.forEach(opt => opt.classList.remove('selected'));
+                
+                // Add selection to clicked option
+                e.target.classList.add('selected');
+                
+                // Store answer
+                const questionNum = Array.from(document.querySelectorAll('.question')).indexOf(question);
+                answers[questionNum] = e.target.dataset.value;
+                
+                // Enable button if all questions answered
+                if (Object.keys(answers).length === 3) {
+                    document.querySelector('.quiz-btn').disabled = false;
+                }
+            }
+        });
+
+        function calculateResult() {
+            const goal = answers[0];
+            const stage = answers[1];
+            const customer = answers[2];
+            
+            let strategy = '';
+            let title = '';
+            let content = '';
+            let recommendations = '';
+
+            // Simple strategy mapping logic
+            if (goal === 'community' && customer === 'developer') {
+                strategy = 'community-first';
+                title = '🌟 Community-First Strategist';
+                content = 'You\'re building for developers, by developers. Your strength is authentic community engagement and bottom-up adoption.';
+                recommendations = 'Focus on: GitHub presence, developer experience, contributor onboarding, and organic growth through word-of-mouth.';
+            } else if (goal === 'enterprise' && stage === 'scale') {
+                strategy = 'enterprise-focused';
+                title = '🏢 Enterprise-Focused Leader';
+                content = 'You understand that open source is a trojan horse for enterprise sales. Your approach balances community value with commercial success.';
+                recommendations = 'Focus on: Open core model, enterprise features, compliance, professional support, and sales-driven growth.';
+            } else if (goal === 'talent' && stage === 'growth') {
+                strategy = 'talent-magnet';
+                title = '🧲 Talent Magnet Builder';
+                content = 'You\'re using open source as a recruiting and employer branding tool. Smart approach for competitive talent markets.';
+                recommendations = 'Focus on: Technical blogging, conference speaking, intern programs, and showcase projects that attract engineers.';
+            } else {
+                strategy = 'balanced-approach';
+                title = '⚖️ Balanced Strategist';
+                content = 'You\'re taking a measured approach that balances multiple OSS benefits. This reduces risk but may dilute focus.';
+                recommendations = 'Focus on: Clear metrics for each goal, staged rollout, and prioritizing based on current business needs.';
+            }
+
+            resultData = { strategy, title, content, recommendations };
+
+            // Show result
+            document.getElementById('result-title').textContent = title;
+            document.getElementById('result-content').innerHTML = `
+                <p><strong>Your Strategy:</strong> ${content}</p>
+                <p><strong>Recommended Focus:</strong> ${recommendations}</p>
+                <p><strong>Next Steps:</strong> <a href="/opensource-zero-to-hero/docs/business-case/business-case-analysis.md">Read the full business case →</a></p>
+            `;
+            
+            document.getElementById('quiz-content').style.display = 'none';
+            document.getElementById('result').style.display = 'block';
+        }
+
+        function shareResult() {
+            const text = `I just discovered I'm a "${resultData.title}" in open source strategy! 🚀\n\nWhat's your OSS competitive advantage type?`;
+            const url = 'https://github.com/NickScherbakov/opensource-zero-to-hero';
+            
+            if (navigator.share) {
+                navigator.share({
+                    title: 'My OSS Strategy Type',
+                    text: text,
+                    url: url
+                });
+            } else {
+                // Fallback to Twitter
+                const twitterUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(text + '\n\n' + url)}&hashtags=OpenSource,Startups`;
+                window.open(twitterUrl, '_blank');
+            }
+        }
+    </script>
+</body>
+</html>
