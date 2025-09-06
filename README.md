@@ -19,7 +19,7 @@
 | 💎 **What You Want** | 🔗 **Direct Action** | ⏱️ **Time** | 🔥 **Viral Rating** |
 |---------------------|---------------------|-------------|-------------------|
 | **🤖 AI VC Expert Chat** | [💬 Get Investment Advice](tools/ai-vc-advisor.html) | 3 min | ⭐⭐⭐⭐⭐ |
-| **🧪 Your OSS Strategy** | [🎯 Take Personality Quiz](tools/oss-strategy-quiz.html) | 2 min | ⭐⭐⭐⭐⭐ |
+| **🧪 Your OSS Strategy** | [🎯 Take Personality Quiz](oss-quiz.html) | 2 min | ⭐⭐⭐⭐⭐ |
 | **💰 ROI Calculator** | [🧮 Calculate Your Savings](tools/calculators/roi-calculator.html) | 5 min | ⭐⭐⭐⭐ |
 | **📊 Shocking Statistics** | [👇 See Key Findings](#-research-findings) | 2 min | ⭐⭐⭐ |
 | **🏆 Success Stories** | [🎯 GitHub/HF/Redis Cases](#-real-examples) | 3 min | ⭐⭐⭐ |
