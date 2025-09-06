@@ -7,7 +7,7 @@
 ![Investor Ready](https://img.shields.io/badge/Investor-Ready-gold)
 
 > **"Open source software companies achieve 7x higher IPO valuations and 14x higher M&A valuations compared to proprietary software companies"** — Linux Foundation Research 2025
-https://nickscherbakov.github.io/opensource-zero-to-hero/user-cases-guide.html
+![How To]https://nickscherbakov.github.io/opensource-zero-to-hero/user-cases-guide.html
 ---
 
 ## 🎯 **Mission Statement**
